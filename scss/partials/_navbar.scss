@@ -1,0 +1,111 @@
+@import '../global/mixins';
+@import '../global/colors';
+@import '../global/functions';
+@import '../global/flexbox';
+@import '../global/typography';
+@import '../global/variables';
+@import '../global/utils';
+@import '../global/base';
+.navbar {
+    position: absolute;
+    right: 0px;
+    @include flex;
+    @include respond-to(x-small) {
+        height: 100%;
+        top: 0px;
+    }
+    @include respond-to(medium) {
+        @include height(70);
+        top: pixel2Rem(30);
+    }
+    .navbar-item {
+        @include flex;
+        @include flex-align(space-between, center);
+        @include padding(0, 20);
+        span {
+            flex: 1;
+            font-family: fontFamily($font-family, Gotham-Book);
+            @include font-size(20);
+            @include padding-l(20);
+        }
+        i {
+            @include font-size(40);
+            @include padding-r(20);
+        }
+        &:nth-child(2) {
+            border-left: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+        }
+        &.choose-activity {
+            @include respond-to(x-small) {
+                min-width: 280px * 0.5;
+            }
+            @include respond-to(small) {
+                min-width: 280px * 0.6;
+            }
+            @include respond-to(medium) {
+                min-width: 280px * 0.8;
+            }
+            @include respond-to(large) {
+                min-width: 280px;
+            }
+        }
+        &.choose-date {
+            min-width: 186px;
+        }
+        &.booknow {
+            @include flex;
+            @include flex-align(center, center);
+            font-family: fontFamily($font-family, D-DIN-Bold);
+            @include font-size(24);
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+            background: $primary;
+            @include respond-to(small) {
+                min-width: 176px * 0.4;
+            }
+            @include respond-to(small) {
+                min-width: 176px * 0.5;
+            }
+            @include respond-to(medium) {
+                min-width: 176px * 0.6;
+            }
+            @include respond-to(large) {
+                min-width: 176px;
+            }
+        }
+        &.language {
+            min-width: 134px;
+            color: $white;
+            i {
+                @include padding-r(0);
+            }
+        }
+        &.toggle-menu {
+            color: $white;
+            i {
+                @include padding(15, 0);
+            }
+        }
+    }
+    .contact-number {
+        @include flex;
+        flex-direction: row;
+        color: $white;
+        @include padding-r(10);
+        h2 {
+            margin: 0px;
+            font-family: fontFamily($font-family, D-DIN-Bold);
+            @include font-size(70);
+            @include flex;
+            @include flex-align(null, center);
+        }
+        .toll-number {
+            font-family: fontFamily($font-family, D-DIN);
+            @include font-size(24);
+            @include flex;
+            @include flex-align(null, center);
+        }
+    }
+}

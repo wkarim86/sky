@@ -1,0 +1,21 @@
+@import 'functions';
+$container-height: 100vh;
+$container-width: 100%;
+$base-font-size: 100%;
+$base-font: 'Gotham Book';
+$font-family : (
+    "Gotham-Book" : 'Gotham Book',
+    "Gotham-Bold" : 'Gotham Bold',
+    "Gotham-Light" : 'Gotham Light',
+    "D-DIN" : 'D-DIN',
+    "D-DIN-Bold" : 'D-DIN-Bold'
+    );
+$breakpoints: ( 'x-small': 320px, 'small': 767px, 'medium': 992px, 'large': 1200px, 'x-large': 1440px);
+$paddings : (
+    'x-sm' : pixel2Rem(5),
+    'sm' : pixel2Rem(10),
+    'md' : pixel2Rem(20),
+    'lg' : pixel2Rem(30),
+    'xl' : pixel2Rem(40)
+)
+

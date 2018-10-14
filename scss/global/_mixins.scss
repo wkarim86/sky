@@ -1,0 +1,68 @@
+@import 'variables';
+
+@mixin fluidImage {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin respond-to($breakpoint) {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+    
+    // If the key exists in the map
+    @if $value !=null {
+        // Prints a media query based on the value
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin container ($position, $zIndex: 1, $width : null, $height: null, $left: null, $right: null,  $top: null, $bottom: null) {
+    position: $position;
+    z-index: $zIndex;
+    @if($width != null){
+        width : $width;
+    }@else{
+        width : auto;
+    }
+    @if($height != null){
+        height : $height;
+    }@else{
+        height : auto;
+    }
+
+    @if ( $left !=null and $right == null) {
+        left: $left;
+    }@else if ($right != null and $left == null){
+        right : $right;
+    }
+
+    @if ( $top !=null and $bottom == null) {
+        top: $top;
+    }@else if($bottom != null and $top == null){
+        bottom: $bottom;
+    }
+}
+
+
+@mixin height($size){    
+    @include respond-to(x-small){
+        height : pixel2Rem($size * 0.6);
+    }
+    @include respond-to(small){
+        height : pixel2Rem($size * 0.7);
+    }
+    @include respond-to(medium){
+        height : pixel2Rem($size * 0.8);
+    }
+
+    @include respond-to(large){        
+        height: pixel2Rem($size);        
+    }
+
+}

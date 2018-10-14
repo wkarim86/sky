@@ -1,0 +1,16 @@
+.btn-outline {
+    padding: 0.9rem 2rem;
+    border: 1px solid color("white");
+    color: $white;
+    display: block;
+    @extend %transition;
+    @extend %font-Gotham-Bold;
+    @extend %font-medium;
+    text-decoration: none;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    &:hover {
+        background: $white;
+        color: $secondary;
+    }
+}

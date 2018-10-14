@@ -1,0 +1,289 @@
+@import 'functions';
+@mixin margin($x, $y) {
+    @include respond-to(x-small) {
+        @if($x > 10 or $y > 10) {
+            margin: pixel2Rem($y * 0.5) pixel2Rem($x * 0.5);
+        }
+        @else {
+            margin: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(small) {
+        @if($x > 10 or $y > 10) {
+            margin: pixel2Rem($y * 0.6) pixel2Rem($x * 0.6);
+        }
+        @else {
+            margin: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(medium) {
+        @if($x > 10 or $y > 10) {
+            margin: pixel2Rem($y * 0.8) pixel2Rem($x * 0.8);
+        }
+        @else {
+            margin: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(large) {
+        margin: pixel2Rem($y) pixel2Rem($x);
+    }
+}
+
+@mixin margin-around($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin: pixel2Rem($p/2);
+        }
+        @else {
+            margin: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin: $p;
+    }
+}
+
+@mixin margin-horizontal($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-left: pixel2Rem($p/2);
+            margin-right: pixel2Rem($p/2);
+        }
+        @else {
+            margin-left: pixel2Rem($p);
+            margin-right: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-left: pixel2Rem($p);
+        margin-right: pixel2Rem($p);
+    }
+}
+
+@mixin margin-vertical($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-top: pixel2Rem($p/2);
+            margin-bottom: pixel2Rem($p/2);
+        }
+        @else {
+            margin-top: pixel2Rem($p);
+            margin-bottom: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-top: pixel2Rem($p);
+        margin-bottom: pixel2Rem($p);
+    }
+}
+
+@mixin margin-l($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-left: pixel2Rem($p/2);
+        }
+        @else {
+            margin-left: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-left: pixel2Rem($p);
+    }
+}
+
+
+/* Padding Mixins */
+
+@mixin padding($x, $y) {
+    @include respond-to(x-small) {
+        @if($x > 10 or $y > 10) {
+            padding: pixel2Rem($y * 0.5) pixel2Rem($x * 0.5);
+        }
+        @else {
+            padding: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(small) {
+        @if($x > 10 or $y > 10) {
+            padding: pixel2Rem($y * 0.6) pixel2Rem($x * 0.6);
+        }
+        @else {
+            padding: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(medium) {
+        @if($x > 10 or $y > 10) {
+            padding: pixel2Rem($y * 0.8) pixel2Rem($x * 0.8);
+        }
+        @else {
+            padding: pixel2Rem($y) pixel2Rem($x);
+        }
+    }
+    @include respond-to(large) {
+        padding: pixel2Rem($y) pixel2Rem($x);
+    }
+}
+
+@mixin padding-around($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding: pixel2Rem($p/2);
+        }
+        @else {
+            padding: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding: $p;
+    }
+}
+
+@mixin padding-horizontal($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-left: pixel2Rem($p/2);
+            padding-right: pixel2Rem($p/2);
+        }
+        @else {
+            padding-left: pixel2Rem($p);
+            padding-right: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding-left: pixel2Rem($p);
+        padding-right: pixel2Rem($p);
+    }
+}
+
+@mixin padding-vertical($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-top: pixel2Rem($p/2);
+            padding-bottom: pixel2Rem($p/2);
+        }
+        @else {
+            padding-top: pixel2Rem($p);
+            padding-bottom: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding-top: pixel2Rem($p);
+        padding-bottom: pixel2Rem($p);
+    }
+}
+
+@mixin padding-l($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-left: pixel2Rem($p/2);
+        }
+        @else {
+            padding-left: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding-left: pixel2Rem($p);
+    }
+}
+
+@mixin padding-r($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-right: pixel2Rem($p * 0.5);
+        }
+        @else {
+            padding-right: pixel2Rem($p);
+        }
+    }
+    @include respond-to(small) {
+        padding-right: pixel2Rem($p * 0.6);
+    }
+    @include respond-to(medium) {
+        padding-right: pixel2Rem($p * 0.8);
+    }
+    @include respond-to(large) {
+        padding-right: pixel2Rem($p);
+    }
+}
+
+@mixin padding-t($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-top: pixel2Rem($p/2);
+        }
+        @else {
+            padding-top: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding-top: pixel2Rem($p);
+    }
+}
+
+@mixin padding-b($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            padding-bottom: pixel2Rem($p/2);
+        }
+        @else {
+            padding-bottom: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        padding-bottom: pixel2Rem($p);
+    }
+}
+
+
+/* Margin Mixin */
+
+@mixin margin-r($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-right: pixel2Rem($p/2);
+        }
+        @else {
+            margin-right: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-right: pixel2Rem($p);
+    }
+}
+
+@mixin margin-t($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-top: pixel2Rem($p/2);
+        }
+        @else {
+            margin-top: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-top: pixel2Rem($p);
+    }
+}
+
+@mixin margin-b($p) {
+    @include respond-to(x-small) {
+        @if($p > 10) {
+            margin-bottom: pixel2Rem($p/2);
+        }
+        @else {
+            margin-bottom: pixel2Rem($p);
+        }
+    }
+    @include respond-to(medium) {
+        margin-bottom: pixel2Rem($p);
+    }
+}
+
+
+/* Transition */
+
+@mixin transition {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+}

@@ -1,0 +1,70 @@
+@import '../global/mixins';
+@import '../global/colors';
+@import '../global/functions';
+@import '../global/flexbox';
+@import '../global/typography';
+@import '../global/variables';
+@import '../global/utils';
+//Video Banner
+.video-banner {
+    @include container(relative, 1, $container-width, $container-height);
+    @include flex;
+    @include flex-align(center);
+    @include flex-align(null, center);
+    background-repeat: no-repeat;
+    @include respond-to(x-small) {
+        background-size: 150% 100%;
+        background-position: center;
+        height: calc(#{$container-height} * 0.7);
+    }
+    @include respond-to(medium) {
+        background-size: cover;
+        background-position: center;
+        height: calc(#{$container-height} * 0.8);
+    }
+    @include respond-to(large) {
+        background-size: cover;
+        background-position: center;
+        height: calc(#{$container-height} * 1);
+    }
+    .video-play-button {
+        color: transparentize($secondary, 0.5);
+        text-decoration: none;
+        i {
+            @include font-size(100);
+        }
+    }
+}
+
+.top-section {
+    @include container(absolute, 10); //container(Position, zIndex, Width, Height, Left, Right, Top, Bottom)
+    @include height(70);
+    width: 100%;
+    @include padding-vertical(30);
+    @include respond-to(x-small) {
+        background: $light-gray;
+    }
+    @include respond-to(medium) {
+        background: transparent;
+    }
+    /* Logo */
+    .logo {
+        @include container(absolute, 10);
+        img {
+            width: 100%;
+            height: auto;
+        }
+        @include respond-to(x-small) {
+            left: pixel2Rem(10);
+            width: pixel2Rem(100);
+        }
+        @include respond-to(medium) {
+            left: pixel2Rem(20);
+            width: pixel2Rem(150);
+        }
+        @include respond-to(large) {
+            left: pixel2Rem(30);
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@mixin flex {
+    display:flex;
+}
+@mixin flex-align($x: null, $y: null){
+    
+    // align contianer horizontally
+    justify-content: $x;
+    align-items: $y;
+    
+}
+
+@mixin flex-align-self($y){
+    align-self: $y;
+}
+
+@mixin flex-direction($direction) {
+    flex-direction : $direction;
+}
