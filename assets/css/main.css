@@ -473,19 +473,6 @@ a {
 /* Padding Mixins */
 /* Margin Mixin */
 /* Transition */
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.bgcolor-white {
-  background: #FFFFFF;
-}
-
-.bgcolor-black-700 {
-  background: rgba(0, 0, 0, 0.3);
-}
-
 .slider {
   display: flex;
 }
@@ -537,6 +524,51 @@ a {
   .slider .box .box-overlay h3 {
     font-size: 5rem;
   }
+}
+
+/* Padding Mixins */
+/* Margin Mixin */
+/* Transition */
+.btn-outline {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  font-family: "Gotham Bold";
+  text-decoration: none;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+@media (min-width: 320px) {
+  .btn-outline {
+    padding: 0.625rem 0.9375rem;
+  }
+}
+@media (min-width: 767px) {
+  .btn-outline {
+    padding: 0.75rem 1.125rem;
+  }
+}
+@media (min-width: 992px) {
+  .btn-outline {
+    padding: 1rem 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-outline {
+    padding: 1.25rem 1.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-outline {
+    font-size: 1.125rem;
+  }
+}
+.btn-outline:hover {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 /*# sourceMappingURL=main.css.map */

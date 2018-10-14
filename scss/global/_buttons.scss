@@ -1,11 +1,18 @@
+@import '../global/mixins';
+@import '../global/colors';
+@import '../global/functions';
+@import '../global/flexbox';
+@import '../global/typography';
+@import '../global/variables';
+@import '../global/utils';
 .btn-outline {
-    padding: 0.9rem 2rem;
-    border: 1px solid color("white");
+    @include padding(30, 20);
+    border: 1px solid $white;
     color: $white;
     display: block;
-    @extend %transition;
-    @extend %font-Gotham-Bold;
-    @extend %font-medium;
+    @include transition;
+    font-family: fontFamily($font-family, Gotham-Bold);
+    @include font-size(18);
     text-decoration: none;
     letter-spacing: -1px;
     text-transform: uppercase;
