@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'functions';
 
 @mixin fluidImage {
     width: 100%;
@@ -22,9 +23,9 @@
     }
 }
 
-@mixin container ($position, $zIndex: 1, $width : null, $height: null, $left: null, $right: null,  $top: null, $bottom: null) {
-    position: $position;
-    z-index: $zIndex;
+///@param {position} $position - HTML element position eg. absolute | relative | fixed | static
+@mixin container ($position, $width : null, $height: null, $left: null, $right: null,  $top: null, $bottom: null) {
+    position: $position;    
     @if($width != null){
         width : $width;
     }@else{
@@ -51,18 +52,48 @@
 
 
 @mixin height($size){    
-    @include respond-to(x-small){
+    @include respond-to(xs){
         height : pixel2Rem($size * 0.6);
     }
-    @include respond-to(small){
+    @include respond-to(sm){
         height : pixel2Rem($size * 0.7);
     }
-    @include respond-to(medium){
+    @include respond-to(md){
         height : pixel2Rem($size * 0.8);
     }
 
-    @include respond-to(large){        
+    @include respond-to(lg){        
         height: pixel2Rem($size);        
+    }
+
+}
+
+
+/* Font Size */
+
+@mixin font-size($size){
+    @include respond-to(xs){
+        @if($size > 30){
+            font-size: pixel2Rem($size * 0.4);
+        }
+    }
+
+    @include respond-to(sm){
+        @if($size > 30){
+            font-size: pixel2Rem($size * 0.5);
+        }
+    }
+
+    @include respond-to(md){
+        @if($size > 30){
+            font-size: pixel2Rem($size * 0.8);
+        }
+    }
+
+    @include respond-to(lg){
+        
+        font-size: pixel2Rem($size);
+        
     }
 
 }

@@ -2,14 +2,13 @@
 @import '../global/colors';
 @import '../global/functions';
 @import '../global/flexbox';
-@import '../global/typography';
 @import '../global/variables';
-@import '../global/utils';
+@import '../utils/utils';
 .slider {
     @include flex;
     .box {
         @include flex;
-        @include container(relative, 1, null, 80vh);
+        @include container(relative, null, 80vh);
         flex: 1;
         overflow: hidden;
         .box-image {
@@ -17,10 +16,11 @@
             height: 100%;
         }
         .box-overlay {
-            @include container(absolute, 9, 100%, 100%);
+            @include container(absolute, 100%, 100%);
             @include flex;
             @include flex-align(center, center);
             flex-direction: column;
+            z-index: 9;
             h3 {
                 font-family: fontFamily($font-family, Gotham-Bold);
                 @include font-size(80);

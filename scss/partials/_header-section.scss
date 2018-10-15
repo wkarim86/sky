@@ -2,31 +2,35 @@
 @import '../global/colors';
 @import '../global/functions';
 @import '../global/flexbox';
-@import '../global/typography';
 @import '../global/variables';
-@import '../global/utils';
-//Video Banner
-.video-banner {
-    @include container(relative, 1, $container-width, $container-height);
+@import '../utils/utils';
+//Full Screen Banner
+.full-banner {
+    @include container(relative, $container-width, $container-height);
     @include flex;
     @include flex-align(center);
     @include flex-align(null, center);
+    background-size: cover;
+    background-position: center;
+    height: calc(#{$container-height} * 1);
     background-repeat: no-repeat;
-    @include respond-to(x-small) {
+    /*
+    @include respond-to(xs) {
         background-size: 150% 100%;
         background-position: center;
         height: calc(#{$container-height} * 0.7);
     }
-    @include respond-to(medium) {
+    @include respond-to(md) {
         background-size: cover;
         background-position: center;
         height: calc(#{$container-height} * 0.8);
     }
-    @include respond-to(large) {
+    @include respond-to(lg) {
         background-size: cover;
         background-position: center;
         height: calc(#{$container-height} * 1);
     }
+    */
     .video-play-button {
         color: transparentize($secondary, 0.5);
         text-decoration: none;
@@ -36,35 +40,36 @@
     }
 }
 
-.top-section {
-    @include container(absolute, 10); //container(Position, zIndex, Width, Height, Left, Right, Top, Bottom)
-    @include height(70);
-    width: 100%;
-    @include padding-vertical(30);
-    @include respond-to(x-small) {
+.header {
+    @include container(fixed, 100%, null, 0, 0, 34px); //container(Position, Width, Height, Left, Right, Top, Bottom)    
+    z-index: 999;
+    
+    /*
+    @include respond-to(xs) {
         background: $light-gray;
     }
-    @include respond-to(medium) {
+    @include respond-to(md) {
         background: transparent;
     }
+    */
     /* Logo */
     .logo {
-        @include container(absolute, 10);
+        @include container(relative, 105px, 48px);
         img {
             width: 100%;
             height: auto;
         }
-        @include respond-to(x-small) {
-            left: pixel2Rem(10);
-            width: pixel2Rem(100);
-        }
-        @include respond-to(medium) {
-            left: pixel2Rem(20);
-            width: pixel2Rem(150);
-        }
-        @include respond-to(large) {
-            left: pixel2Rem(30);
-            width: auto;
-        }
+        // @include respond-to(xs) {
+        //     left: pixel2Rem(10);
+        //     width: pixel2Rem(100);
+        // }
+        // @include respond-to(md) {
+        //     left: pixel2Rem(20);
+        //     width: pixel2Rem(150);
+        // }
+        // @include respond-to(lg) {
+        //     left: pixel2Rem(30);
+        //     width: auto;
+        // }
     }
 }

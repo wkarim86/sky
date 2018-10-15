@@ -10,7 +10,19 @@ $font-family : (
     "D-DIN" : 'D-DIN',
     "D-DIN-Bold" : 'D-DIN-Bold'
     );
-$breakpoints: ( 'x-small': 320px, 'small': 767px, 'medium': 992px, 'large': 1200px, 'x-large': 1440px);
+$breakpoints: ( 
+    // Extra small screen / phone
+    'xs': 320px, 
+    // Small screen / phone
+    'sm': 576px, 
+    // Medium screen / tablet
+    'md': 768px, 
+    // Large screen / desktop
+    'lg': 992px, 
+    // Extra large screen / wide desktop
+    'xl': 1200px);
+
+    
 $paddings : (
     'x-sm' : pixel2Rem(5),
     'sm' : pixel2Rem(10),
