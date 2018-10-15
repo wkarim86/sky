@@ -1,0 +1,23 @@
+@import '../global/variables';
+@import '../global/mixins';
+@import '../global/flexbox';
+@import '../global/colors';
+.testimonial {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .client-info {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        right: 0px;
+        background: transparentize($secondary, 0.26);
+    }
+    .client-name {
+        background: $primary;
+        @include padding(20, 15);
+        color: $white;
+        text-align: center;
+    }
+}

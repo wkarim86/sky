@@ -1,44 +1,61 @@
 @import '../global/variables';
 @import '../global/colors';
 @import '../global/flexbox';
-
-a{
+@import '../global/mixins';
+@import '../utils/layout';
+a {
     text-decoration: none;
     color: $secondary;
 }
-  
-.bgcolor-white{
+
+.bgcolor-white {
     background: $white;
 }
 
-.bgcolor-black-700{
+.bgcolor-black-700 {
     background: transparentize($secondary, 0.7);
 }
 
-.align-content-center{
+.align-content-center {
     @include flex-align(center, center);
 }
 
-.align-content-right{
+.align-content-right {
     @include flex-align(flex-end, null);
 }
 
-.align-content-left{
+.align-content-left {
     @include flex-align(flex-start, null);
 }
 
-.no-padding-right{
-    padding-right:0px !important;
+.no-padding-right {
+    padding-right: 0px !important;
 }
-.no-padding-left{
-    padding-left:0px !important;
+
+.no-padding-left {
+    padding-left: 0px !important;
 }
-.no-padding-top{
-    padding-top:0px !important;
+
+.no-padding-top {
+    padding-top: 0px !important;
 }
-.no-padding-bottom{
-    padding-bottom:0px !important;
+
+.no-padding-bottom {
+    padding-bottom: 0px !important;
 }
-.no-padding{
-    padding:0px !important;
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.full-width-container {
+    @include container(relative, $container-width, $container-height);
+    @include flex;
+    @include flex-align(center);
+    @include flex-align(null, center);
+    overflow: hidden;
 }
