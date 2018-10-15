@@ -5,15 +5,14 @@
 @import '../global/variables';
 @import '../utils/utils';
 .btn-outline {
-    @include padding(30, 20);
+    @include padding(20, 10);
     border: 1px solid $white;
     color: $white;
     display: block;
     @include transition;
     font-family: fontFamily($font-family, Gotham-Bold);
-    @include font-size(18);
-    text-decoration: none;
-    letter-spacing: -1px;
+    @include font-size(12);
+    text-decoration: none;    
     text-transform: uppercase;
     &:hover {
         background: $white;

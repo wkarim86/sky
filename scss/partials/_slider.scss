@@ -23,7 +23,7 @@
             z-index: 9;
             h3 {
                 font-family: fontFamily($font-family, Gotham-Bold);
-                @include font-size(80);
+                @include font-size(48);
                 color: $white;
                 letter-spacing: -1px;
                 margin: 0px;
