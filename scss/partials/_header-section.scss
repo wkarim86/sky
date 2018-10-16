@@ -4,42 +4,6 @@
 @import '../global/flexbox';
 @import '../global/variables';
 @import '../utils/utils';
-//Full Screen Banner
-.full-banner {
-    @include container(relative, $container-width, $container-height);
-    @include flex;
-    @include flex-align(center);
-    @include flex-align(null, center);
-    background-size: cover;
-    background-position: center;
-    height: calc(#{$container-height} * 1);
-    background-repeat: no-repeat;
-    /*
-    @include respond-to(xs) {
-        background-size: 150% 100%;
-        background-position: center;
-        height: calc(#{$container-height} * 0.7);
-    }
-    @include respond-to(md) {
-        background-size: cover;
-        background-position: center;
-        height: calc(#{$container-height} * 0.8);
-    }
-    @include respond-to(lg) {
-        background-size: cover;
-        background-position: center;
-        height: calc(#{$container-height} * 1);
-    }
-    */
-    .video-play-button {
-        color: transparentize($secondary, 0.5);
-        text-decoration: none;
-        i {
-            @include font-size(100);
-        }
-    }
-}
-
 .header {
     @include container(fixed, 100%, null, 0, 0, 34px); //container(Position, Width, Height, Left, Right, Top, Bottom)    
     z-index: 999;

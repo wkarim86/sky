@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body>
@@ -32,7 +34,7 @@
 
                     <!-- Choose Activity Dropdown -->
                     <div href="#" class="navbar-item choose-activity bgcolor-white">
-                        <select>
+                        <select class="wide">
                                <option>Tandem SkyDive</option>
                                <option>Gyrocopter SkyDive</option>
                            </select>
@@ -40,9 +42,7 @@
 
                     <!-- Choose Date -->
                     <a href="#" class="navbar-item choose-date bgcolor-white">
-                        <select type="date">
-                                        <option>Date</option>                                        
-                                    </select>
+                       <input type="text" name="date" class="datepicker" placeholder="Date">
                         <!--
                             <span>Date</span>
                             <i class="material-icons icon-size-md">arrow_drop_down</i> -->
@@ -68,21 +68,26 @@
         </div>
 
     </div>
-    <div class="full-banner" style="background-image:url(assets/image/Lets-Fly.png);">
-        <a href="#" class="video-play-button"><i class="material-icons">play_circle_filled</i></a>
+    <div class="full-width-container">
+        <img src="assets/image/Lets-Fly.png" class="image">
+        <div class="overlay">                
+                <a href="#" class="video-play-button"><i class="material-icons">play_circle_filled</i></a>
+        </div>
+        
     </div>
 
     <!-- Slider -->
     <section id="slider" class="relative">
         <div class="slider">
-            <div class="box">
-                <img src="assets/image/Tandem.png" class="box-image">
-                <div class="box-overlay">
-                    <h3>Tandem Skydiving</h3>
-                    <a href="#" class="btn-outline">Discover more</a>
+            <div class="box-container">
+                <img src="assets/image/Tandem.png" class="image">
+                <div class="overlay">
+                        <h3>Tandem Skydiving</h3>
+                        <a href="#" class="btn-outline">Discover more</a>                
                 </div>
+                
 
-                <!-- Hover Div -->
+                <!-- Hover Div 
                 <div class="box-hover-overlay">
                     <a href="#" class="btn-book-now">Book Now</a>
                     <div class="booking-desc">
@@ -104,44 +109,45 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
-
-            <div class="box">
-                <img src="assets/image/Gyro.png" class="box-image">
-                <div class="box-overlay">
-                    <h3>Tandem Gyrocopter</h3>
-                    <a href="#" class="btn-outline">Discover more</a>
-                </div>
-
-                <!-- Hover Div -->
-                <div class="box-hover-overlay">
-                    <a href="#" class="btn-book-now">Book Now</a>
-                    <div class="booking-desc">
-                        <div class="info-text">
-                            <span class="upper">Upto</span>
-                            <span class="lower">1000ft.</span>
-                        </div>
-                        <div class="info-text">
-                            <span class="upper">Unique 1 on 1</span>
-                            <span class="lower">Experience</span>
-                        </div>
-                        <div class="info-text">
-                            <span class="upper">Dubai</span>
-                            <span class="lower">360<sup>0</sup></span>
-                        </div>
-                        <div class="info-text">
-                            <span class="upper">Stable</span>
-                            <span class="lower">Aircraft</span>
-                        </div>
+            <div class="box-container">
+                    <img src="assets/image/Gyro.png" class="image">
+                    <div class="overlay">
+                        <h3>Tandem Gyrocopter</h3>
+                        <a href="#" class="btn-outline">Discover more</a>
 
                     </div>
+                    <!-- Hover Div 
+                    <div class="box-hover-overlay">
+                        <a href="#" class="btn-book-now">Book Now</a>
+                        <div class="booking-desc">
+                            <div class="info-text">
+                                <span class="upper">Upto</span>
+                                <span class="lower">1000ft.</span>
+                            </div>
+                            <div class="info-text">
+                                <span class="upper">Unique 1 on 1</span>
+                                <span class="lower">Experience</span>
+                            </div>
+                            <div class="info-text">
+                                <span class="upper">Dubai</span>
+                                <span class="lower">360<sup>0</sup></span>
+                            </div>
+                            <div class="info-text">
+                                <span class="upper">Stable</span>
+                                <span class="lower">Aircraft</span>
+                            </div>
+    
+                        </div>
+                    </div> -->
+    
+    
                 </div>
-
-
-            </div>
+    
+          
         </div>
 
         <div class="slider-controls">
@@ -156,25 +162,66 @@
         <div class="testimonial">
             <div>
                 <img src="assets/image/Testimonials.png">
-                <div class="client-info col-5">
+                <div class="client-info col-5 no-padding">
                     <div class="client-name font-medium-bold">Jennifer Lawrence</div>
-                    <p>
-
+                    <p>                        
+                        Now I am not scared <br> Of anything in the world!<br>
+                        <strong>What an experience !!!</strong>
                     </p>
+                    <a href="#" class="arrow left"><img src="assets/image/arrow-left.png" /></a>
+                    <a href="#" class="arrow right"><img src="assets/image/arrow-right.png" /></a>
                 </div>
-            </div>
-
+                
+                
+                
+            </div>            
         </div>
+       
+       
     </section>
+
+
+<!-- Footer -->
+<footer>
+        <!-- bottom logo -->
+        <a href="#" class="logo-bottom">
+            <img src="assets/image/logo.png" title="SkyDive Dubai"/>
+        </a>
+        <!-- bottom navigation -->
+        <div class="widget">
+                <ul class="nav-bottom">
+                
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Media centre</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+
+                 <!-- Tripadvisor and social icons -->
+        <div class="widget-right">
+                <img src="assets/image/tripadvisor-icon.png" style="width:160px;">
+                 <ul class="social-icons">
+                        <li><a href="#" class="facebook-icon"></a></li>
+                        <li><a href="#" class="insta-icon"></a></li>
+                        <li><a href="#" class="twitter-icon"></a></li>
+                        <li><a href="#" class="youtube-icon"></a></li>
+                    </ul>
+            </div>
+        </div>
+        
+        
+       
+        
+    </footer>    
 
     <script src="assets/libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('select').niceSelect();
-        });
-    </script>
+    <script src="assets/libs/flatpickr/flatpickr.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
-</html>
+</html> 

@@ -2,12 +2,3 @@
     $base: 16;
     @return #{$px / $base}rem;
 }
-
-@function fontFamily($fs, $key){
-    @if(map-has-key($fs, $key)){
-        @return map-get($fs, $key);
-    }@else{
-        @warn "Font Family #{$key} doesn't in the list.";
-        @return null;
-    }
-}

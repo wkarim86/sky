@@ -10,8 +10,9 @@
     color: $white;
     display: block;
     @include transition;
-    font-family: fontFamily($font-family, Gotham-Bold);
+    @include fontFamily(Gotham-Bold);
     @include font-size(12);
+    @include margin-t(10);
     text-decoration: none;    
     text-transform: uppercase;
     &:hover {

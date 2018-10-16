@@ -3,6 +3,15 @@
 @import '../global/flexbox';
 @import '../global/mixins';
 @import '../utils/layout';
+
+
+html,
+body {
+    font-size: $base-font-size;
+    margin: 0px;
+    padding: 0px;    
+}
+
 a {
     text-decoration: none;
     color: $secondary;
@@ -13,7 +22,7 @@ a {
 }
 
 .bgcolor-black-700 {
-    background: transparentize($secondary, 0.7);
+    background: transparentize($secondary, 0.3);
 }
 
 .align-content-center {
@@ -50,12 +59,4 @@ a {
 
 .relative {
     position: relative;
-}
-
-.full-width-container {
-    @include container(relative, $container-width, $container-height);
-    @include flex;
-    @include flex-align(center);
-    @include flex-align(null, center);
-    overflow: hidden;
 }

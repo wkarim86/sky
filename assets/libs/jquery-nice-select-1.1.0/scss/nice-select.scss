@@ -18,8 +18,8 @@ $arrow_color: $gray !default;
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
-  border-radius: $input_border_radius;
-  border: solid 1px $gray_light; 
+  /*border-radius: $input_border_radius;*/
+  /*border: solid 1px $gray_light;*/ 
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -115,7 +115,7 @@ $arrow_color: $gray !default;
   // List and options
   .list {
     background-color: #fff;
-    border-radius: $input_border_radius;
+   /* border-radius: $input_border_radius; */
     box-shadow: 0 0 0 1px rgba($gray_dark, .11);
     box-sizing: border-box;
     margin-top: 4px;

@@ -1,8 +1,53 @@
-.box {
+.full-width-container, .box-container {
+    @include container(relative, $container-width, $container-height);
     @include flex;
-    @include container(relative, null, 80vh);
-    flex: 1;
+    @include flex-align(center);
+    @include flex-align(null, center);
     overflow: hidden;
+    
+    /* Button for Video play */
+    .video-play-button {     
+        @include absolute(3);
+        color: transparentize($secondary, 0.5);
+        text-decoration: none;
+        i {
+            @include font-size(100);
+        }
+    }
+
+    .image{
+        @include fullbox;
+        @include absolute(1);
+        left:0px;
+        top:0px;
+    }
+
+    .overlay{
+        @include flex;
+        @include flex-align(center, center);
+        flex-direction : column;
+        @include absolute(2);
+        @include fullbox;   
+        left:0px;
+        top:0px;     
+        
+    }
+
+    h3 {
+        @include fontFamily(Gotham-Bold);
+        @include font-size(60);       
+        color: $white;
+        margin: 0px;
+    }
+
+}
+.box-container {    
+    height: 80vh;
+    flex: 1;
+    h3{
+        @include font-size(48);
+    }
+    /*
     .box-image {
         width: 100%;
         height: 100%;
@@ -20,4 +65,5 @@
             margin: 0px;
         }
     }
+    */
 }

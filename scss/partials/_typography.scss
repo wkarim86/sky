@@ -2,6 +2,6 @@
 @import '../global/mixins';
 @import '../global/functions';
 .font-medium-bold {
-    font-family: fontFamily($font-family, D-DIN-Bold);
+    @include fontFamily(D-DIN-Bold);
     font-size: pixel2Rem(27);
 }

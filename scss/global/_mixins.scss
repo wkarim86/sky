@@ -23,6 +23,24 @@
     }
 }
 
+
+@mixin screen-to($breakpoint) {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+    
+    // If the key exists in the map
+    @if $value !=null {
+        // Prints a media query based on the value
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
 ///@param {position} $position - HTML element position eg. absolute | relative | fixed | static
 @mixin container ($position, $width : null, $height: null, $left: null, $right: null,  $top: null, $bottom: null) {
     position: $position;    
@@ -96,4 +114,29 @@
         
     }
 
+}
+
+@mixin fontFamily($family){
+    @if(map-has-key($font-family, $family)){
+        font-family: map-get($font-family, $family);
+    }@else{
+        @warn "Font Family #{$family} doesn't in the list.";        
+    }
+}
+
+
+@mixin fullbox{
+    width : 100%;
+    height: 100%;
+}
+
+@mixin absolute($zIndex: 1){
+    position: absolute;
+    z-index: $zIndex;
+}
+@mixin relative{
+    position: relative;    
+}
+@mixin fixed{
+    position: fixed;
 }

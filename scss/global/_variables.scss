@@ -7,6 +7,7 @@ $font-family : (
     "Gotham-Book" : 'Gotham Book',
     "Gotham-Bold" : 'Gotham Bold',
     "Gotham-Light" : 'Gotham Light',
+    "Gotham-Medium" : 'Gotham Medium',
     "D-DIN" : 'D-DIN',
     "D-DIN-Bold" : 'D-DIN-Bold'
     );
@@ -20,7 +21,10 @@ $breakpoints: (
     // Large screen / desktop
     'lg': 992px, 
     // Extra large screen / wide desktop
-    'xl': 1200px);
+    'xl': 1200px,
+    // Extra large 4K screen / wide desktop
+    '2xl' : 1440px
+    );
 
     
 $paddings : (
@@ -29,5 +33,8 @@ $paddings : (
     'md' : pixel2Rem(20),
     'lg' : pixel2Rem(30),
     'xl' : pixel2Rem(40)
-)
+);
 
+$font-xl-destop : (
+    "xs" : pixel2Rem(2)
+);

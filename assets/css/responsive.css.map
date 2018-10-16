@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAyFA,eAAe",
+"sources": ["../../scss/global/_mixins.scss"],
+"names": [],
+"file": "responsive.css"
+}

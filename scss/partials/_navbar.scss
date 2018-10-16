@@ -18,7 +18,7 @@
         @include padding(18, 0);
         span {
             flex: 1;
-            font-family: fontFamily($font-family, Gotham-Book);
+            @include fontFamily(Gotham-Book);
             text-transform: uppercase;
             @include font-size(12);
             @include padding-r(20);
@@ -53,7 +53,7 @@
         &.booknow {
             @include flex;
             @include flex-align(center, center);
-            font-family: fontFamily($font-family, D-DIN-Bold);
+            @include fontFamily(D-DIN-Bold);
             @include font-size(18);            
             text-align: center;
             color: $white;
@@ -96,14 +96,14 @@
         @include padding-r(10);
         h2 {
             margin: 0px;
-            font-family: fontFamily($font-family, D-DIN-Bold);
+            @include fontFamily(D-DIN-Bold);
             @include font-size(46);
             @include flex;
             @include flex-align(null, center);
             @include padding-r(5);
         }
         .toll-number {
-            font-family: fontFamily($font-family, D-DIN);
+            @include fontFamily(D-DIN);
             @include font-size(18);
             @include flex;
             @include flex-align(null, center);

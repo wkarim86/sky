@@ -12,16 +12,19 @@
     position: absolute;
     width: 100%;
     z-index: 9;
-    height: 66px;
+    height: 38px;
     top: 50%;
-    margin-top: -60px;
+    margin-top: -19px;
     .arrow {
-        @include container(absolute, 66px, 66px);
+        @include container(absolute, 38px, 38px);
         &.left {
-            left: 0px;
+            left: 10px;
         }
         &.right {
             right: 0px;
+        }
+        img{            
+            height:38px;
         }
     }
 }

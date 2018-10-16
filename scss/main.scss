@@ -1,12 +1,12 @@
 // Custom Fonts
-@import 'partials/body';
+@import 'global/fonts';
+@import 'global/base';
+@import 'utils/grid';
 @import 'partials/header-section';
 @import 'partials/navbar';
 @import 'partials/slider';
 @import 'partials/buttons';
-@import 'global/fonts';
-@import 'global/base';
-@import 'utils/grid';
 @import 'partials/testimonials';
 @import 'partials/typography';
+@import 'partials/footer';
 @import '../assets/libs/jquery-nice-select-1.1.0/scss/nice-select';

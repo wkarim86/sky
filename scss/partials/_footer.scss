@@ -1,0 +1,74 @@
+@import "../global/mixins";
+@import "../global/colors";
+@import "../global/flexbox";
+@import "../global/variables";
+
+footer{
+    @include flex;
+    @include padding(20, 15);
+    @include flex-align(null, center);
+    background:$secondary;
+    .logo-bottom{
+        img{
+            width:110px;
+        }        
+    }
+
+    /* Footer navigations */
+    .nav-bottom{
+        list-style: none;
+        margin:0px;
+
+        li{
+            display: inline-block;
+            margin:0px 7px;
+        }
+
+        a {
+            @include fontFamily(Gotham-Medium);
+            @include font-size(14);
+            color:$nobel-gray;
+        }
+    }
+
+    .widget{
+        @include flex;
+        @include flex-align(space-between, center);
+        flex:1;
+
+    }
+    .widget-right{
+        display:flex;
+        @include flex-align(null, center);
+    }
+}
+
+.social-icons{
+    li{
+        height:24px;
+        width:24px;
+        display:inline-block;
+
+        a{
+            display:block;
+            height:24px;
+        }
+    }
+}
+
+.facebook-icon{
+    background: url(../image/facebook-icon.png) no-repeat;
+    background-size:cover;
+}
+.insta-icon{
+    background: url(../image/instagram-icon.png) no-repeat;
+    background-size:cover;
+}
+.twitter-icon{
+    background: url(../image/twitter-icon.png) no-repeat;
+    background-size:cover;
+} 
+.youtube-icon{
+    background: url(../image/youtube-icon.png) no-repeat;
+    background-size:cover;
+}
