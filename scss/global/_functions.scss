@@ -1,4 +1,5 @@
-@function pixel2Rem($px){
+@function pixel2Rem($px, $factor : 1.0){
     $base: 16;
-    @return #{$px / $base}rem;
+    $size : ($px / $base) * $factor;
+    @return #{$size}rem;
 }

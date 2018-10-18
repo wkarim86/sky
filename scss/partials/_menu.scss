@@ -1,0 +1,45 @@
+@import '../global/mixins';
+@import '../global/colors';
+@import '../global/functions';
+@import '../global/flexbox';
+@import '../global/variables';
+@import '../utils/utils';
+
+.main-navigation {
+    @include position(fixed, 999);
+    @include flex;
+    @include flex-align(center,null);
+    width:100%;
+    background : transparentize($secondary, $amount: 0.26);
+    top : 0px;
+    left: 0px;
+    @include padding(0, 60);    
+    article{
+        box-sizing: border-box;
+        h4{
+            @include margin-around(0);
+            @include margin-b(50);
+            a{
+                @include fontFamily(Gotham-Bold);
+                color: $primary;               
+                text-decoration: none;
+            }
+            
+        }
+
+     
+    }
+
+    ul{
+        margin:0px;
+        padding:0px;
+        li{
+            list-style: none;
+            line-height:48px;
+            a{
+                @include fontFamily(Gotham-Bold);
+                color: $nobel-gray;
+            }
+        }
+    }
+}

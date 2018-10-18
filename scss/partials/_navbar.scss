@@ -4,57 +4,45 @@
 @import '../global/flexbox';
 @import '../global/variables';
 @import '../utils/utils';
-@import '../global/base';
 .navbar {
     @include flex;
-    @include respond-to(xs) {
-        height: 100%;
-        top: 0px;
-    }
-   
+    
     .navbar-item {
         @include flex;
         @include flex-align(space-between, center); 
-        @include padding(18, 0);
-        span {
+        @include padding(30, 0);
+        @include position(relative,1);
+        label, span {
             flex: 1;
             @include fontFamily(Gotham-Book);
-            text-transform: uppercase;
-            @include font-size(12);
-            @include padding-r(20);
+            text-transform: uppercase;            
+            
         }
-        i {
-            @include font-size(20);            
-        }
+        
         &:nth-child(2) {
             border-left: 1px solid $light-gray;
             border-right: 1px solid $light-gray;
         }
 
-        /*
         &.choose-activity {
-            @include respond-to(xs) {
-                min-width: 280px * 0.5;
-            }
-            @include respond-to(sm) {
-                min-width: 280px * 0.6;
-            }
-            @include respond-to(md) {
-                min-width: 280px * 0.8;
-            }
-            @include respond-to(lg) {
-                min-width: 280px;
+            input, label{
+                width:250px;
+                cursor: pointer;
             }
         }
+        
         &.choose-date {
-            min-width: 186px;
+            input{
+                width: 128px;    
+                cursor: pointer;
+            }
+            
         }
-        */
+       
         &.booknow {
             @include flex;
             @include flex-align(center, center);
-            @include fontFamily(D-DIN-Bold);
-            @include font-size(18);            
+            @include fontFamily(D-DIN-Bold);            
             text-align: center;
             color: $white;
             text-transform: uppercase;
@@ -74,7 +62,10 @@
             }
             */
         }
-        &.language {            
+        &.choose-language {
+            input, label {
+                width: 115px;
+            }        
             color: $white;
             i {
                 @include padding-r(0);
@@ -82,11 +73,9 @@
         }
         &.toggle-menu {
             color: $white;
-            @include padding-r(0);
+            @include padding-r(30);
             @include padding-l(0);
-            i {
-                @include padding(15, 0);
-            }
+            
         }
     }
     .contact-number {
@@ -96,17 +85,51 @@
         @include padding-r(10);
         h2 {
             margin: 0px;
-            @include fontFamily(D-DIN-Bold);
-            @include font-size(46);
+            @include fontFamily(D-DIN-Bold);            
             @include flex;
             @include flex-align(null, center);
             @include padding-r(5);
         }
         .toll-number {
-            @include fontFamily(D-DIN);
-            @include font-size(18);
+            @include fontFamily(D-DIN);            
             @include flex;
             @include flex-align(null, center);
         }
+    }
+}
+
+.dropdown{
+    @include position(absolute);
+    width: 100%;
+    background: $white;
+    border: 1px solid $light-gray;
+    left: 0px;
+    @include padding(0, 20);
+    
+    ul{
+        list-style: none;
+        margin:0px;
+        padding: 0px;
+    }
+
+    li{
+       a{            
+           @include padding(30,10);
+           @include fontFamily(Gotham-Book);           
+           display:block;
+       }
+    }
+}
+
+.choose-language-dropdown{
+    background: transparentize($secondary, 0.3);
+    border:0px;
+
+    ul{
+        li{
+            a{            
+              color:$white;
+            }
+         }
     }
 }

@@ -5,3 +5,123 @@
     @include fontFamily(D-DIN-Bold);
     font-size: pixel2Rem(27);
 }
+
+.text-all-caps{
+    text-transform: uppercase;
+}
+
+@media (min-width:1008px){
+    
+    .text-120{
+        @include font-size-md('120');
+    }
+    .text-100{
+        @include font-size-md('100');
+    }
+    
+    .text-80{
+        @include font-size-md('80');
+    }
+    .text-70{
+        @include font-size-md('70');
+    }
+    .text-60{
+        @include font-size-md('60');
+    }
+    .text-42{
+        @include font-size-md('42');
+    }
+    .text-40{
+        @include font-size-md('40');
+    }
+    .text-36{
+        @include font-size-md('36');
+    }
+    .text-30{
+        @include font-size-md('30');
+    }
+    .text-26{
+        @include font-size-md('26');
+    }
+    .text-24{
+        @include font-size-md('24');
+    }
+    .text-22{
+        @include font-size-md('22');
+    }
+    .text-20{
+        @include font-size-md('20');
+    }
+    .text-18{
+        @include font-size-md('18');
+    }
+    .text-16{
+        @include font-size-md('16');
+    }
+    .text-14{
+        @include font-size-md('14');
+    }
+    .text-12{
+        @include font-size-md('12');
+    }
+    
+}
+
+
+@media (min-width:1300px){
+    .text-120{
+        @include font-size-lg('120');
+    }
+    .text-100{
+        @include font-size-lg('100');
+    }
+    
+    .text-80{
+        @include font-size-lg('80');
+    }
+    .text-70{
+        @include font-size-lg('70');
+    }
+    .text-60{
+        @include font-size-lg('60');
+    }
+    .text-42{
+        @include font-size-lg('42');
+    }
+    .text-40{
+        @include font-size-lg('40');
+    }
+    .text-36{
+        @include font-size-lg('36');
+    }
+    .text-30{
+        @include font-size-lg('30');
+    }
+    .text-26{
+        @include font-size-lg('26');
+    }
+    .text-24{
+        @include font-size-lg('24');
+    }
+    .text-22{
+        @include font-size-lg('22');
+    }
+    .text-20{
+        @include font-size-lg('20');
+    }
+    .text-18{
+        @include font-size-lg('18');
+    }
+    .text-16{
+        @include font-size-lg('16');
+    }
+    .text-14{
+        @include font-size-lg('14');
+    }
+    .text-12{
+        @include font-size-lg('12');
+    }
+    
+}
+
+

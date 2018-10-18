@@ -1,0 +1,39 @@
+@import '../global/mixins';
+@import '../global/colors';
+@import '../global/functions';
+@import '../global/flexbox';
+@import '../global/variables';
+@import '../utils/utils';
+
+.box-slider-controls {
+    @include position(absolute);
+    width: 100%;
+    z-index: 9;    
+    top: 50%;
+    margin-top: -19px;
+    .arrow {        
+        @include position(absolute);
+        padding:10px;
+        display:inline-block;   
+        
+        img{           
+            height:60px;
+            margin:auto;
+        }
+
+        &.left{
+            left:20px;
+        }
+        &.right{
+            right:20px;
+        }
+    }
+    
+}
+.box-slider{
+    .slides{
+        height:100%;
+        flex:1;
+    }
+}
+

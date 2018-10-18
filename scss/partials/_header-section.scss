@@ -18,7 +18,7 @@
     */
     /* Logo */
     .logo {
-        @include container(relative, 105px, 48px);
+        width:154px;
         img {
             width: 100%;
             height: auto;

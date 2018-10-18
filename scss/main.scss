@@ -4,9 +4,13 @@
 @import 'utils/grid';
 @import 'partials/header-section';
 @import 'partials/navbar';
-@import 'partials/slider';
+@import 'partials/menu';
+@import 'partials/toggle-menu';
+@import 'partials/box-slider';
 @import 'partials/buttons';
 @import 'partials/testimonials';
 @import 'partials/typography';
 @import 'partials/footer';
+@import 'responsive';
 @import '../assets/libs/jquery-nice-select-1.1.0/scss/nice-select';
+@import 'utils/overrides';

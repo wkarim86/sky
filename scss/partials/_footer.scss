@@ -26,7 +26,7 @@ footer{
 
         a {
             @include fontFamily(Gotham-Medium);
-            @include font-size(14);
+            font-size : 14;
             color:$nobel-gray;
         }
     }
@@ -37,38 +37,33 @@ footer{
         flex:1;
 
     }
-    .widget-right{
+    .widget-right, .widget-left{
         display:flex;
         @include flex-align(null, center);
     }
 }
 
 .social-icons{
+    display:flex;
     li{
-        height:24px;
-        width:24px;
-        display:inline-block;
+        height:36px;
+        width:36px;        
+        background:$white;
+        border-radius:36px;
+        list-style: none;
+        margin:0 10px;
 
         a{
             display:block;
-            height:24px;
+            width:36px;
+            height:36px;
+            line-height:36px;
+            text-align:center;
+            font-size:20px;
+            transition: all .5s ease-in-out;
+             &:hover{
+                 color:$primary;
+             }
         }
     }
-}
-
-.facebook-icon{
-    background: url(../image/facebook-icon.png) no-repeat;
-    background-size:cover;
-}
-.insta-icon{
-    background: url(../image/instagram-icon.png) no-repeat;
-    background-size:cover;
-}
-.twitter-icon{
-    background: url(../image/twitter-icon.png) no-repeat;
-    background-size:cover;
-} 
-.youtube-icon{
-    background: url(../image/youtube-icon.png) no-repeat;
-    background-size:cover;
 }

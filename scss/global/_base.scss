@@ -3,7 +3,7 @@
 @import '../global/flexbox';
 @import '../global/mixins';
 @import '../utils/layout';
-
+@import '../utils/utils';
 
 html,
 body {
@@ -15,6 +15,9 @@ body {
 a {
     text-decoration: none;
     color: $secondary;
+}
+a:focus{
+    outline: none;
 }
 
 .bgcolor-white {
@@ -60,3 +63,32 @@ a {
 .relative {
     position: relative;
 }
+
+.slides{
+    position:relative;
+    display:flex; 
+}
+
+/* Form Elements */
+.form-control{
+    display:flex;
+    @include flex-align(null, center);
+}
+.input-plain{
+    border:0px;
+}
+.input-plain:focus{
+    outline: none;
+}
+
+.open{
+    display:block;    
+}
+.close{
+    display:none !important;
+}
+
+.flex-col{
+    margin:0 pixel2Rem(35);    
+}
+

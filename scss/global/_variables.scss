@@ -2,6 +2,7 @@
 $container-height: 100vh;
 $container-width: 100%;
 $base-font-size: 100%;
+$factor : 0.60;  
 $base-font: 'Gotham Book';
 $font-family : (
     "Gotham-Book" : 'Gotham Book',
@@ -26,6 +27,11 @@ $breakpoints: (
     '2xl' : 1440px
     );
 
+$div-positions: (
+    "absolute" : absolute,
+    "relative" : relative,
+    "fixed"    : fixed
+);
     
 $paddings : (
     'x-sm' : pixel2Rem(5),
@@ -35,6 +41,65 @@ $paddings : (
     'xl' : pixel2Rem(40)
 );
 
-$font-xl-destop : (
-    "xs" : pixel2Rem(2)
+// xl > 1440px
+$font-lg : (
+    '120' : pixel2Rem(120),
+    '100' : pixel2Rem(100),
+    '80'  : pixel2Rem(80),
+    '70'  : pixel2Rem(70),
+    '60'  : pixel2Rem(60),
+    '42'  : pixel2Rem(42),
+    '40'  : pixel2Rem(40),
+    '36'  : pixel2Rem(36),
+    '30'  : pixel2Rem(30),
+    '26'  : pixel2Rem(26),
+    '24'  : pixel2Rem(24),
+    '22'  : pixel2Rem(22),
+    '20'  : pixel2Rem(20),
+    '18'  : pixel2Rem(18),
+    '16'  : pixel2Rem(16),
+    '14'  : pixel2Rem(14),
+    '12'  : pixel2Rem(12)
+);
+
+// lg > 1200
+$font-md : (
+    "120" : pixel2Rem(120, $factor),
+    "100" : pixel2Rem(100, $factor),
+    "80"  : pixel2Rem(80, $factor),
+    "70"  : pixel2Rem(70, $factor),
+    "60"  : pixel2Rem(60, $factor),
+    "42"  : pixel2Rem(42, $factor),
+    "40"  : pixel2Rem(40, $factor),
+    "36"  : pixel2Rem(36, $factor),
+    "30"  : pixel2Rem(30, $factor),
+    "26"  : pixel2Rem(26, $factor),
+    "24"  : pixel2Rem(24, $factor),
+    "22"  : pixel2Rem(22, $factor),
+    "20"  : pixel2Rem(20, $factor),
+    "18"  : pixel2Rem(18, $factor),
+    "16"  : pixel2Rem(16, $factor),
+    "14"  : pixel2Rem(14, $factor),
+    "12"  : pixel2Rem(12, $factor)
+);
+
+// sm > 320 < 800
+$font-sm : (
+    "120" : pixel2Rem(120, $factor),
+    "100" : pixel2Rem(100, $factor),
+    "80"  : pixel2Rem(80, $factor),
+    "70"  : pixel2Rem(70, $factor),
+    "60"  : pixel2Rem(60, $factor),
+    "42"  : pixel2Rem(42, $factor),
+    "40"  : pixel2Rem(40, $factor),
+    "36"  : pixel2Rem(36, $factor),
+    "30"  : pixel2Rem(30, $factor),
+    "26"  : pixel2Rem(26, $factor),
+    "24"  : pixel2Rem(24, $factor),
+    "22"  : pixel2Rem(22, $factor),
+    "20"  : pixel2Rem(20, $factor),
+    "18"  : pixel2Rem(18, $factor),
+    "16"  : pixel2Rem(16, $factor),
+    "14"  : pixel2Rem(14, $factor),
+    "12"  : pixel2Rem(12, $factor)
 );

@@ -5,18 +5,34 @@
 @import '../global/variables';
 @import '../utils/utils';
 .btn-outline {
-    @include padding(20, 10);
+    @include padding(30, 15);
     border: 1px solid $white;
     color: $white;
     display: block;
     @include transition;
-    @include fontFamily(Gotham-Bold);
-    @include font-size(12);
+    @include fontFamily(Gotham-Bold);    
     @include margin-t(10);
     text-decoration: none;    
     text-transform: uppercase;
     &:hover {
         background: $white;
         color: $secondary;
+    }
+}
+
+.btn-cta{    
+    @include padding(30, 15);
+    @include transition;
+    @include fontFamily(D-DIN-Bold); 
+    display: block;    
+    @include position(absolute,3);    
+    bottom: 8.3%;
+    background : $primary;    
+    color: $white;    
+    text-decoration: none;    
+    text-transform: uppercase;
+    border:0px;
+    &:hover {
+       
     }
 }

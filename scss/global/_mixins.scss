@@ -1,27 +1,7 @@
 @import 'variables';
 @import 'functions';
 
-@mixin fluidImage {
-    width: 100%;
-    height: 100%;
-}
 
-@mixin respond-to($breakpoint) {
-    // Retrieves the value from the key
-    $value: map-get($breakpoints, $breakpoint);
-    
-    // If the key exists in the map
-    @if $value !=null {
-        // Prints a media query based on the value
-        @media (min-width: $value) {
-            @content;
-        }
-    }
-    // If the key doesn't exist in the map
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
-    }
-}
 
 
 @mixin screen-to($breakpoint) {
@@ -89,29 +69,20 @@
 
 /* Font Size */
 
-@mixin font-size($size){
-    @include respond-to(xs){
-        @if($size > 30){
-            font-size: pixel2Rem($size * 0.4);
-        }
+@mixin font-size-lg($key){
+    @if(map-has-key($font-lg, $key)){
+        font-size: map-get($font-lg, $key);
+    }@else{
+        @warn "Font Size #{$key} doesn't in the list.";        
     }
 
-    @include respond-to(sm){
-        @if($size > 30){
-            font-size: pixel2Rem($size * 0.5);
-        }
-    }
+}
 
-    @include respond-to(md){
-        @if($size > 30){
-            font-size: pixel2Rem($size * 0.8);
-        }
-    }
-
-    @include respond-to(lg){
-        
-        font-size: pixel2Rem($size);
-        
+@mixin font-size-md($key){
+    @if(map-has-key($font-md, $key)){
+        font-size: map-get($font-md, $key);
+    }@else{
+        @warn "Font Size #{$key} doesn't in the list.";        
     }
 
 }
@@ -123,6 +94,7 @@
         @warn "Font Family #{$family} doesn't in the list.";        
     }
 }
+
 
 
 @mixin fullbox{
@@ -139,4 +111,14 @@
 }
 @mixin fixed{
     position: fixed;
+}
+
+@mixin position($pos, $zIndex: 1){
+    position : map-get($div-positions, $pos);
+    z-index: $zIndex;
+}
+
+@mixin autoHeight{
+    width:100%;
+    height: auto;
 }

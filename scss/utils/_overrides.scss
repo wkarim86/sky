@@ -1,0 +1,49 @@
+@import '../global/variables';
+@import '../global/colors';
+@import '../global/mixins';
+@import '../global/functions';
+/* Flatpickr jquery library css overrides */
+
+.flatpickr-calendar{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius:0px;
+}
+
+.flatpickr-current-month span.cur-month, .flatpickr-current-month input.cur-year {
+    @include fontFamily(D-DIN-Bold);
+}
+.flatpickr-weekdays .flatpickr-weekdaycontainer span.flatpickr-weekday, .flatpickr-day{
+    @include fontFamily(D-DIN);
+    font-size:pixel2Rem(14);
+    color: $nobel-gray;
+}
+
+.flatpickr-day{
+    color : $secondary;   
+}
+
+.flatpickr-day.disabled, .flatpickr-day.disabled:hover{
+    color: $light-gray-200;
+}
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay{
+    background: $primary;
+    border-color: $primary;
+}
+
+/* hide indicator arrow */
+.flatpickr-calendar:before, .flatpickr-calendar:after{
+    display: none;
+}
+
+/* Beefup Accordion */
+.beefup{
+    border:0px;
+    margin:0px;
+    border-radius:0px;
+}
+
+.beefup__body{
+    padding-top:0px;
+    padding:0px;
+}

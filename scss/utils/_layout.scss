@@ -1,23 +1,17 @@
-.full-width-container, .box-container {
-    @include container(relative, $container-width, $container-height);
-    @include flex;
-    @include flex-align(center);
-    @include flex-align(null, center);
-    overflow: hidden;
-    
+.container {
+    @include position(relative) ;
+    width: $container-width;
+    overflow: hidden;   
     /* Button for Video play */
     .video-play-button {     
-        @include absolute(3);
-        color: transparentize($secondary, 0.5);
-        text-decoration: none;
-        i {
-            @include font-size(100);
-        }
+        @include position(absolute,3);
+        color: transparentize($white, 0.5);
+        text-decoration: none;        
     }
 
     .image{
-        @include fullbox;
-        @include absolute(1);
+        @include autoHeight;
+        @include position(absolute,1);
         left:0px;
         top:0px;
     }
@@ -26,44 +20,60 @@
         @include flex;
         @include flex-align(center, center);
         flex-direction : column;
-        @include absolute(2);
+        @include position(absolute,2);
         @include fullbox;   
         left:0px;
-        top:0px;     
-        
+        top:0px;        
     }
 
     h3 {
-        @include fontFamily(Gotham-Bold);
-        @include font-size(60);       
+        @include fontFamily(Gotham-Bold);        
         color: $white;
         margin: 0px;
+        text-align:center;
+        max-width:90%;
     }
 
 }
-.box-container {    
-    height: 80vh;
-    flex: 1;
-    h3{
-        @include font-size(48);
-    }
-    /*
-    .box-image {
-        width: 100%;
-        height: 100%;
-    }
-    .box-overlay {
-        @include container(absolute, 100%, 100%);
-        @include flex;
-        @include flex-align(center, center);
-        flex-direction: column;
-        z-index: 9;
-        h3 {
-            font-family: fontFamily($font-family, Gotham-Bold);
-            @include font-size(60);
-            color: $white;
-            margin: 0px;
-        }
-    }
-    */
+.height-1-of-5{
+    height:20vh;
+}
+.height-2-of-5 {    
+    height: 40vh;   
+}
+
+.height-3-of-5 {    
+    height: 60vh;   
+}
+.height-4-of-5 {    
+    height: 80vh;        
+}
+
+.height-5-of-5 {    
+    height: 100vh;        
+}
+
+.width-1-of-5{
+    width:20vh;
+}
+.width-2-of-5 {    
+    width: 40vh;   
+}
+
+.width-3-of-5 {    
+    width: 60vh;   
+}
+.width-4-of-5 {    
+    width: 80vh;        
+}
+
+.width-5-of-5 {    
+    width: 100vh;        
+}
+
+
+.masonry{
+    display: flex;
+    flex-flow: column wrap;
+    @include autoHeight;
 }
