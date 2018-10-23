@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="assets/libs/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/slick/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/slick/slick.css" rel="stylesheet" type="text/css">
@@ -18,23 +19,14 @@
 <body>
     <div class="header">
         <div class="row">
-            <div class="col-2 align-content-center">
+            
                 <div class="logo">
                     <a href="#"><img src="assets/image/logo.png"></a>
                 </div>
-            </div>
-
-
+                
             <!-- Navigation and Dropdown -->
-            <div class="col-10 no-padding-right align-content-right">
+            <div class="visible-lg">
                 <div class="navbar">
-
-                    <div class="contact-number">
-                        <h2 class="text-60">+971800</h2>
-                        <div class="toll-number text-22">
-                            SKY.DIVE <br> 75903483
-                        </div>
-                    </div>
 
                     <!-- Choose Activity Dropdown -->
                     <div class="navbar-item choose-activity bgcolor-white custom-select" data-toggle=".choose-activity-dropdown">
@@ -71,6 +63,14 @@
                             Book Now
                         </a>
 
+
+                    <div class="navbar-item bgcolor-black-700 contact-number">
+                        <h2 class="text-42">+971800</h2>
+                        <div class="toll-number text-20">
+                            SKY.DIVE <br> 75903483
+                        </div>
+                    </div>    
+
                     <div class="navbar-item choose-language text-20 bgcolor-black-700 custom-select" data-toggle=".choose-language-dropdown">
                             <div class="form-control" >
                                     <label class="text-20 text-all-caps custom-select-label">English</label>
@@ -97,15 +97,14 @@
                     </div>
 
                 </div>
-
             </div>
+            
         </div>
-
     </div>
     <div class="container height-5-of-5">
         <img src="assets/image/Lets-Fly.png" class="image">
         <div class="overlay">                
-            <a href="#" class="video-play-button"><i class="material-icons text-100">play_circle_filled</i></a>            
+            <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video-play-button"><i class="material-icons text-100">play_circle_filled</i></a>            
         </div>
         <!-- Call to action button -->        
     </div>
@@ -115,9 +114,9 @@
         <div class="box-slider">
             <div class="slides">
                 <div class="height-4-of-5">
-                    <img src="assets/image/Tandem.png" class="image">
+                    <img src="assets/image/Tandem.jpg" class="image">
                     <div class="overlay">
-                            <h3 class="text-80">Tandem Skydiving</h3>
+                            <h3 class="banner-title text-80">Tandem Skydiving</h3>
                             <a href="#" class="btn-outline text-18">Discover more</a>                
                     </div>
                 </div>
@@ -152,7 +151,7 @@
                     <div class="height-4-of-5">
                         <img src="assets/image/Gyro.png" class="image">
                         <div class="overlay">
-                                <h3 class="text-80">Tandem Gyrocopter</h3>
+                                <h3 class="banner-title text-80">Tandem Gyrocopter</h3>
                                 <a href="#" class="btn-outline text-18">Discover more</a>                
                         </div>
                     </div>
@@ -185,9 +184,9 @@
             </div>            
             <div class="slides">
                     <div class="height-4-of-5">
-                        <img src="assets/image/Tandem.png" class="image">
+                        <img src="assets/image/Tandem.jpg" class="image">
                         <div class="overlay">
-                                <h3 class="text-80">Tandem Skydiving</h3>
+                                <h3 class="banner-title text-80">Tandem Skydiving</h3>
                                 <a href="#" class="btn-outline text-18">Discover more</a>                
                         </div>
                     </div>
@@ -307,7 +306,9 @@
  <!-- Main Dropdown Menu -->
  <div class="main-navigation close">
      
-        <div class="flex-col">
+    <div class="row flex-row">    
+        <div class="column flex-col">
+            <div class="column">
                 <article class="beefup">
                         <h4 class="text-36"><a href="#">Tandem Skydiving</a></h4>
                         <div class="beefup__body">
@@ -318,19 +319,19 @@
                             </ul>
                             </div>
                 </article> 
-        </div>
-              
-               
-        <div class="flex-col">
-            <article class="beefup">
-                    <h4 class="text-36"><a href="#">Tandem Gyrocopter</a></h4>
-                </article>
-                <article class="beefup">
-                    <h4 class="text-36"><a href="#">Tandem Paramotor</a></h4>              
-                </article> 
-        </div>
-               
-        <div class="flex-col">
+            </div>
+
+            <div class="column flex-row">
+                    <article class="beefup">
+                            <h4 class="text-36"><a href="#">Tandem Gyrocopter</a></h4>
+                        </article>
+                        <article class="beefup">
+                            <h4 class="text-36"><a href="#">Tandem Paramotor</a></h4>              
+                    </article> 
+            </div>
+
+                   
+        <div class="column">
             <article class="beefup">
                     <h4 class="text-36"><a href="#">School</a></h4>
                     <div class="beefup__body">
@@ -341,7 +342,38 @@
                             </ul>
                         </div>
                 </article> 
-        </div>       
+        </div>  
+    </div>
+
+    <div class="column spacer-140">
+
+    </div>
+
+    <div class="column">
+        <div class="column">
+            <div class="contact-number">
+                <h2 class="text-42">+971800</h2>
+                <div class="toll-number text-20">
+                    SKY.DIVE <br> 75903483
+                </div>
+            </div>
+        </div>
+        <div class="flex-grow column align-content-center">
+            <div class="vertical-line"></div>
+        </div>
+
+        <div class="column">
+            <h3 class="heading-white text-40">Any question ?</h3>
+        </div>
+        <div class="column align-content-center">
+                <a href="#" class="btn-primary text-24">Contact Us</a>                
+            </div>
+
+    </div>
+        
+    </div>
+
+   
 
         <div class="flex-col">
             <ul>
@@ -353,6 +385,8 @@
                 <li><a href="#" class="text-24">Careers</a></li>
             </ul>
         </div>
+
+        
             
     
 </div>
@@ -362,6 +396,7 @@
 <script src="assets/libs/flatpickr/flatpickr.js" type="text/javascript"></script>
 <script src="assets/libs/slick/slick.js" type="text/javascript"></script>
 <script src="assets/libs/beefup/js/jquery.beefup.min.js" type="text/javascript"></script>
+<script src="assets/libs/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
 <script src="assets/js/custom-select.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
 

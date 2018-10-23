@@ -1,7 +1,4 @@
-@import '../global/variables';
-@import '../global/colors';
-@import '../global/mixins';
-@import '../global/functions';
+
 /* Flatpickr jquery library css overrides */
 
 .flatpickr-calendar{
@@ -46,4 +43,13 @@
 .beefup__body{
     padding-top:0px;
     padding:0px;
+    margin:0px;
+}
+.beefup__head::after{
+   border:0px;
+   font-family: 'Material Icons';
+}
+
+.beefup.is-open .collapse{
+    display:block;
 }

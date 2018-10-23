@@ -1,12 +1,6 @@
-@import '../global/mixins';
-@import '../global/colors';
-@import '../global/functions';
-@import '../global/flexbox';
-@import '../global/variables';
-@import '../utils/utils';
 .navbar {
-    @include flex;
-    
+    @include flex;  
+    height:70px;
     .navbar-item {
         @include flex;
         @include flex-align(space-between, center); 
@@ -14,7 +8,7 @@
         @include position(relative,1);
         label, span {
             flex: 1;
-            @include fontFamily(Gotham-Book);
+            @include fontFamily(Gotham-Book);            
             text-transform: uppercase;            
             
         }
@@ -28,6 +22,14 @@
             input, label{
                 width:250px;
                 cursor: pointer;
+            }
+            .skd-select{
+                width:250px;
+                select{
+                    @include padding(0,20);
+                }
+                
+                
             }
         }
         
@@ -63,6 +65,7 @@
             */
         }
         &.choose-language {
+            cursor: pointer;
             input, label {
                 width: 115px;
             }        
@@ -78,47 +81,7 @@
             
         }
     }
-    .contact-number {
-        @include flex;
-        flex-direction: row;
-        color: $white;
-        @include padding-r(10);
-        h2 {
-            margin: 0px;
-            @include fontFamily(D-DIN-Bold);            
-            @include flex;
-            @include flex-align(null, center);
-            @include padding-r(5);
-        }
-        .toll-number {
-            @include fontFamily(D-DIN);            
-            @include flex;
-            @include flex-align(null, center);
-        }
-    }
-}
-
-.dropdown{
-    @include position(absolute);
-    width: 100%;
-    background: $white;
-    border: 1px solid $light-gray;
-    left: 0px;
-    @include padding(0, 20);
-    
-    ul{
-        list-style: none;
-        margin:0px;
-        padding: 0px;
-    }
-
-    li{
-       a{            
-           @include padding(30,10);
-           @include fontFamily(Gotham-Book);           
-           display:block;
-       }
-    }
+  
 }
 
 .choose-language-dropdown{

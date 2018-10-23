@@ -1,16 +1,25 @@
 // Custom Fonts
+@import 'global/variables';
+@import 'global/colors';
 @import 'global/fonts';
-@import 'global/base';
+@import 'global/flexbox';
+@import 'global/mixins';
+@import 'utils/utils';
+@import 'utils/layout';
+@import 'utils/inner-pages';
 @import 'utils/grid';
+@import 'global/base';
 @import 'partials/header-section';
+@import 'partials/dropdown';
 @import 'partials/navbar';
 @import 'partials/menu';
 @import 'partials/toggle-menu';
 @import 'partials/box-slider';
+@import 'partials/thumbnail-slider';
 @import 'partials/buttons';
 @import 'partials/testimonials';
 @import 'partials/typography';
+@import 'partials/form';
 @import 'partials/footer';
-@import 'responsive';
 @import '../assets/libs/jquery-nice-select-1.1.0/scss/nice-select';
 @import 'utils/overrides';

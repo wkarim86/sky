@@ -1,9 +1,29 @@
-@import '../global/mixins';
-@import '../global/colors';
-@import '../global/functions';
-@import '../global/flexbox';
-@import '../global/variables';
-@import '../utils/utils';
+%btn-primary{    
+    @include padding(30, 15);
+    @include transition;
+    @include fontFamily(D-DIN-Bold); 
+    display: block;            
+    background : $primary;    
+    color: $white;    
+    text-decoration: none;    
+    text-transform: uppercase;
+    border:0px;    
+    align-items: center;   
+}
+
+%btn-secondary{    
+    @include padding(30, 15);
+    @include transition;
+    @include fontFamily(D-DIN-Bold); 
+    display: block;            
+    background : $secondary;    
+    color: $white;    
+    text-decoration: none;    
+    text-transform: uppercase;
+    border:0px;    
+    align-items: center;   
+}
+
 .btn-outline {
     @include padding(30, 15);
     border: 1px solid $white;
@@ -20,19 +40,34 @@
     }
 }
 
-.btn-cta{    
-    @include padding(30, 15);
+.btn-cta{        
+    @include flex;
+    @include position(absolute,3);    
+    bottom: 8.3%;    
+    border:0px; 
+
+    & button:not(:first-child), & a:not(:first-child){
+        margin-left:pixel2Rem(10);
+    }
+    
+}
+
+.btn-primary{    
+   @extend %btn-primary;
+}
+.btn-secondary{
+    @extend %btn-secondary;
+}
+
+.btn-submit{
+    @include padding(60, 20);
     @include transition;
     @include fontFamily(D-DIN-Bold); 
-    display: block;    
-    @include position(absolute,3);    
-    bottom: 8.3%;
+    display:inline-block;    
     background : $primary;    
     color: $white;    
     text-decoration: none;    
     text-transform: uppercase;
     border:0px;
-    &:hover {
-       
-    }
 }
+

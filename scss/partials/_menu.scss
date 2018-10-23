@@ -1,10 +1,3 @@
-@import '../global/mixins';
-@import '../global/colors';
-@import '../global/functions';
-@import '../global/flexbox';
-@import '../global/variables';
-@import '../utils/utils';
-
 .main-navigation {
     @include position(fixed, 999);
     @include flex;
@@ -31,6 +24,7 @@
     }
 
     ul{
+        position:relative;
         margin:0px;
         padding:0px;
         li{
@@ -41,5 +35,9 @@
                 color: $nobel-gray;
             }
         }
+
     }
+
+
 }
+

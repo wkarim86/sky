@@ -1,15 +1,245 @@
+@font-face {
+  font-family: 'Gotham Book';
+  src: url(../fonts/Gotham-Book.otf); }
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url(../fonts/Gotham-Bold.otf); }
+@font-face {
+  font-family: 'Gotham Light';
+  src: url(../fonts/Gotham-Light.otf); }
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url(../fonts/GothamMedium.ttf); }
+@font-face {
+  font-family: 'D-DIN';
+  src: url(../fonts/D-DIN.otf); }
+@font-face {
+  font-family: 'D-DIN-Bold';
+  src: url(../fonts/D-DIN-Bold.otf); }
 /* Font Size */
-@media (min-width: 320px) and (max-width: 810px) {
-  .visible-sm {
-    display: block; }
+/* Margins */
+/* Padding Mixins */
+/* Margin Mixin */
+/* Transition */
+/* Borders */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  /* Button for Video play */ }
+  .container .video-play-button {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none; }
+  .container .image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px; }
+  .container .overlay {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px; }
+  .container .banner-title {
+    font-family: "Gotham Bold";
+    color: #FFFFFF;
+    margin: 0px;
+    text-align: center;
+    max-width: 90%;
+    letter-spacing: -3px; }
 
-  .visible-md {
-    display: none; } }
-@media (min-width: 992px) {
-  .visible-sm {
-    display: none; }
+.height-1-of-5 {
+  height: 20vh; }
 
-  .visible-md {
+.height-2-of-5 {
+  height: 40vh; }
+
+.height-3-of-5 {
+  height: 60vh; }
+
+.height-4-of-5 {
+  height: 80vh; }
+
+.height-5-of-5 {
+  height: 100vh; }
+
+.width-1-of-5 {
+  width: 20vw; }
+
+.width-2-of-5 {
+  width: 40vw; }
+
+.width-3-of-5 {
+  width: 60vw; }
+
+.width-4-of-5 {
+  width: 80vw; }
+
+.width-5-of-5 {
+  width: 100vw; }
+
+.masonry {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto; }
+
+.layout-5050 {
+  display: flex;
+  flex-wrap: wrap; }
+  .layout-5050 > div {
+    flex-basis: 50%; }
+
+.visible-lg {
+  display: block; }
+
+.visible-sm {
+  display: none; }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .visible-sm {
     display: block; } }
+@media (min-width: 800px) and (max-width: 990px) {
+  .header {
+    top: 0px; }
+    .header .row {
+      height: 64px;
+      background: #FFFFFF; }
+    .header .logo {
+      width: 100px;
+      margin: auto; }
+
+  .visible-lg {
+    display: none; } }
+@media (min-width: 991px) and (max-width: 1280px) {
+  .header {
+    height: 2.75rem; }
+    .header .logo {
+      width: 100px;
+      margin: auto 3.125rem; }
+    .header .navbar {
+      height: 2.75rem; }
+      .header .navbar .navbar-item {
+        padding: 0rem 1rem; }
+        .header .navbar .navbar-item.choose-activity input, .header .navbar .navbar-item.choose-activity label {
+          width: 10rem; }
+        .header .navbar .navbar-item.choose-date input {
+          width: 5rem; }
+        .header .navbar .navbar-item.choose-language input, .header .navbar .navbar-item.choose-language label {
+          width: 4.375rem; }
+    .header .dropdown li a {
+      padding: 0.625rem 1rem; } }
+/* Medium to Large Screen sizes */
+@media (min-width: 991px) and (max-width: 1440px) {
+  .header .hamburger .line {
+    width: 20px;
+    margin: 4px auto; }
+  .header .hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg); }
+  .header .hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-4px) rotate(-44deg);
+    -ms-transform: translateY(-4px) rotate(-44deg);
+    -o-transform: translateY(-4px) rotate(-44deg);
+    transform: translateY(-4px) rotate(-44deg); }
+
+  .container .image, .testimonial .slides .slider-image {
+    height: 100%; }
+
+  .content-padding {
+    padding: 6.5625rem 6.5625rem; }
+
+  /* Container size classes */
+  .height-1-of-5-md {
+    height: 20vh; }
+
+  .height-2-of-5-md {
+    height: 40vh; }
+
+  .height-3-of-5-md {
+    height: 60vh; }
+
+  .height-4-of-5-md {
+    height: 80vh; }
+
+  .height-5-of-5-md {
+    height: 100vh; }
+
+  .width-1-of-5-md {
+    width: 20vw; }
+
+  .width-2-of-5-md {
+    width: 40vw; }
+
+  .width-3-of-5-md {
+    width: 60vw; }
+
+  .width-4-of-5-md {
+    width: 80vw; }
+
+  .width-5-of-5-md {
+    width: 100vw; } }
+/* ----------- iPad Pro ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .height-1-of-5-md {
+    height: 20vh; }
+
+  .height-2-of-5-md {
+    height: 25vh; }
+
+  .height-3-of-5-md {
+    height: 30vh; }
+
+  .height-4-of-5-md {
+    height: 55vh !important; }
+
+  .height-5-of-5-md {
+    height: 60vh !important; } }
+/* Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .height-1-of-5-md {
+    height: 20vh; }
+
+  .height-2-of-5-md {
+    height: 40vh; }
+
+  .height-3-of-5-md {
+    height: 60vh; }
+
+  .height-4-of-5-md {
+    height: 80vh !important; }
+
+  .height-5-of-5-md {
+    height: 100vh !important; } }
+@media (min-width: 1100px) and (max-width: 1440px) {
+  .header .row, .header .navbar {
+    height: 44px; }
+  .header .logo {
+    width: 100px;
+    margin: auto 60px; }
+  .header .navbar .navbar-item {
+    padding: 0rem 0.9375rem; }
+  .header .navbar .navbar-item.choose-language input, .header .navbar .navbar-item.choose-language label {
+    width: 90px; }
+  .header .navbar .navbar-item.choose-activity input, .header .navbar .navbar-item.choose-activity label {
+    width: 180px; }
+  .header .navbar .navbar-item.choose-date input {
+    width: 80px; } }
 
 /*# sourceMappingURL=responsive.css.map */

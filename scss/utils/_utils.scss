@@ -1,5 +1,3 @@
-@import '../global/functions';
-
 /* Margins */
 @mixin margin($x, $y) {
     margin: pixel2Rem($y) pixel2Rem($x);

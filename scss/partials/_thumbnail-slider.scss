@@ -1,0 +1,22 @@
+.thumbnail-slider{
+    position:relative;  
+    @include flex;  
+    @include margin-t(50);
+
+    /* slick slider override */
+    .slick-slide {
+        & > div{
+            padding:0 20px; 
+        }
+    }
+  
+
+    .thumbnail{        
+        height:324px;   
+        display: flex !important;     
+        @include flex;
+        @include flex-align(center,center);
+        flex:1;
+        background:#fff;                        
+    }
+}

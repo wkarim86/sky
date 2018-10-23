@@ -1,74 +1,73 @@
-@import '../global/variables';
-@import '../global/mixins';
-@import '../global/functions';
 .font-medium-bold {
     @include fontFamily(D-DIN-Bold);
     font-size: pixel2Rem(27);
+}
+.heading-white{
+    color:$white;
+    @include fontFamily(Gotham-Bold);
 }
 
 .text-all-caps{
     text-transform: uppercase;
 }
 
-@media (min-width:1008px){
-    
+
+@media (min-width:991px) and (max-width:1440px){
     .text-120{
-        @include font-size-md('120');
+        @include font-size(pixel2Rem(80));
     }
     .text-100{
-        @include font-size-md('100');
+        @include font-size(pixel2Rem(76));
     }
     
     .text-80{
-        @include font-size-md('80');
+        @include font-size(pixel2Rem(60));
     }
     .text-70{
-        @include font-size-md('70');
+        @include font-size(pixel2Rem(52));
     }
     .text-60{
-        @include font-size-md('60');
+        @include font-size(pixel2Rem(44));
     }
     .text-42{
-        @include font-size-md('42');
+        @include font-size(pixel2Rem(31));
     }
     .text-40{
-        @include font-size-md('40');
+        @include font-size(pixel2Rem(30));
     }
     .text-36{
-        @include font-size-md('36');
+        @include font-size(pixel2Rem(27));
     }
     .text-30{
-        @include font-size-md('30');
+        @include font-size(pixel2Rem(22));
     }
     .text-26{
-        @include font-size-md('26');
+        @include font-size(pixel2Rem(18));
     }
     .text-24{
-        @include font-size-md('24');
+        @include font-size(pixel2Rem(18));
     }
     .text-22{
-        @include font-size-md('22');
+        @include font-size(pixel2Rem(16));
     }
     .text-20{
-        @include font-size-md('20');
+        @include font-size(pixel2Rem(14));
     }
     .text-18{
-        @include font-size-md('18');
+        @include font-size(pixel2Rem(13));
     }
     .text-16{
-        @include font-size-md('16');
+        @include font-size(pixel2Rem(12));
     }
     .text-14{
-        @include font-size-md('14');
+        @include font-size(pixel2Rem(11));
     }
     .text-12{
-        @include font-size-md('12');
+        @include font-size(pixel2Rem(10));
     }
-    
 }
 
-
-@media (min-width:1300px){
+@media (min-width:1441px){
     .text-120{
         @include font-size-lg('120');
     }
@@ -123,5 +122,3 @@
     }
     
 }
-
-

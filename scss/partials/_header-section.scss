@@ -1,13 +1,9 @@
-@import '../global/mixins';
-@import '../global/colors';
-@import '../global/functions';
-@import '../global/flexbox';
-@import '../global/variables';
-@import '../utils/utils';
 .header {
-    @include container(fixed, 100%, null, 0, 0, 34px); //container(Position, Width, Height, Left, Right, Top, Bottom)    
+    @include container(fixed, 100%, 70px, 0, 0, 34px); //container(Position, Width, Height, Left, Right, Top, Bottom)    
     z-index: 999;
-    
+    .row{
+        @include flex-align(space-between, null);
+    }
     /*
     @include respond-to(xs) {
         background: $light-gray;
@@ -19,6 +15,7 @@
     /* Logo */
     .logo {
         width:154px;
+        margin:auto 100px;
         img {
             width: 100%;
             height: auto;

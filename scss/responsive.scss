@@ -1,26 +1,244 @@
 @import 'global/variables';
 @import 'global/colors';
+@import 'global/fonts';
+@import 'global/flexbox';
 @import 'global/mixins';
+@import 'utils/utils';
+@import 'utils/layout';
+.visible-lg{
+    display: block;
+}
+.visible-sm{
+    display:none;
+}
 
-
-@media (min-width:320px) and (max-width:810px){
+@media (min-width:320px) and (max-width:768px){
     .visible-sm{
         display:block;
     }
-    .visible-md{
-        display:none;
-    }
-
-   
+    
 
 }
 
-@media (min-width:992px){
-    .visible-sm{
-        display:none;
+
+
+@media (min-width:800px) and (max-width:990px){
+    .header{
+        top:0px;
+        .row{
+            height:64px;
+            background:$white;
+        }        
+        .logo{
+            width:100px;
+            margin: auto;
+        }
+
+    }
+    .visible-lg{
+        display: none;
+    }
+}
+
+@media (min-width:991px) and (max-width:1280px){
+    .header{        
+        height:pixel2Rem(44);
+        .logo{
+            width:100px;
+            margin: auto pixel2Rem(50);
+        }
+
+        .navbar{
+            height:pixel2Rem(44);
+            .navbar-item{
+                @include padding(16, 0);
+
+                &.choose-activity input, &.choose-activity label{
+                    width:pixel2Rem(160);
+                }
+
+                &.choose-date input{
+                    width: pixel2Rem(80);
+                }
+
+                &.choose-language input, &.choose-language label{
+                    width:pixel2Rem(70);
+                }
+
+            }
+        }
+
+        .dropdown{
+            li{
+                a{
+                    @include padding(16,10);
+                }
+            }
+        }
+
+
+    }
+}
+
+/* Medium to Large Screen sizes */
+
+@media (min-width:991px) and (max-width:1440px){
+    .header{
+        
+        .hamburger{
+            .line{
+                width:20px;
+                margin:4px auto;
+            }
+            &.is-active {
+                .line{
+                    &:nth-child(1){
+                        -webkit-transform: translateY(8px) rotate(45deg);
+                        -ms-transform: translateY(8px) rotate(45deg);
+                        -o-transform: translateY(8px) rotate(45deg);
+                        transform: translateY(8px) rotate(45deg);
+                    }
+                    &:nth-child(3){
+                        -webkit-transform: translateY(-4px) rotate(-44deg);
+                        -ms-transform: translateY(-4px) rotate(-44deg);
+                        -o-transform: translateY(-4px) rotate(-44deg);
+                        transform: translateY(-4px) rotate(-44deg);
+                    }
+                }
+            }
+        }
     }
 
-    .visible-md{
-        display:block;
+    .container .image, .testimonial .slides .slider-image{
+        height:100%;
     }
+
+    .content-padding{
+        @include padding(105,105);
+    }
+
+    /* Container size classes */
+    .height-1-of-5-md{
+        height:20vh;
+    }
+    .height-2-of-5-md {    
+        height: 40vh;   
+    }
+    
+    .height-3-of-5-md {
+        height: 60vh;   
+    }
+    .height-4-of-5-md{
+        height: 80vh;        
+    }
+    
+    .height-5-of-5-md{    
+        height: 100vh;        
+    }
+
+    .width-1-of-5-md{
+        width:20vw;
+    }
+    .width-2-of-5-md{    
+        width: 40vw;   
+    }
+    
+    .width-3-of-5-md{    
+        width: 60vw;   
+    }
+    .width-4-of-5-md{    
+        width: 80vw;        
+    }
+    
+    .width-5-of-5-md{    
+        width: 100vw;        
+    }
+
+
+}
+
+/* ----------- iPad Pro ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+     
+    .height-1-of-5-md{
+        height:20vh;
+    }
+    .height-2-of-5-md {    
+        height: 25vh;   
+    }
+    
+    .height-3-of-5-md {
+        height: 30vh;   
+    }
+    .height-4-of-5-md{
+        height: 55vh !important;        
+    }
+    
+    .height-5-of-5-md{    
+        height: 60vh !important;        
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .height-1-of-5-md{
+        height:20vh;
+    }
+    .height-2-of-5-md {    
+        height: 40vh;   
+    }
+    
+    .height-3-of-5-md {
+        height: 60vh;   
+    }
+    .height-4-of-5-md{
+        height: 80vh !important;        
+    }
+    
+    .height-5-of-5-md{    
+        height: 100vh !important;        
+    }
+    
+
+}
+
+@media (min-width:1100px) and (max-width:1440px){
+    
+    .header{        
+        .row, .navbar{
+            height:44px;           
+        }        
+        .logo{
+            width:100px;
+            margin: auto 60px;
+        }
+
+        .navbar .navbar-item{
+            @include padding(15, 0);
+        }
+
+        .navbar .navbar-item.choose-language input, .navbar .navbar-item.choose-language label{
+            width:90px;
+        }
+        
+        .navbar .navbar-item.choose-activity input, .navbar .navbar-item.choose-activity label{
+            width:180px;
+        }
+        .navbar .navbar-item.choose-date input{
+            width:80px;
+        }
+     
+    } 
+    
+   
 }

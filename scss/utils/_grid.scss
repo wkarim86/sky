@@ -1,5 +1,3 @@
-@import '../global/mixins';
-@import '../global/functions';
 /* Grid System */
 .row{
     @include flex;        
