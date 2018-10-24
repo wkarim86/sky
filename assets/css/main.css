@@ -148,7 +148,9 @@
     font-size: 36px; }
 
 .list {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important; }
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important; }
+  .list:first-child {
+    border-top: 0px !important; }
   .list dt {
     padding: 0px; }
 
@@ -238,6 +240,9 @@ a, button, select {
 .bgcolor-black-700 {
   background: rgba(0, 0, 0, 0.7); }
 
+.text-color-white {
+  color: #FFFFFF !important; }
+
 .contact-number {
   display: -webkit-box;
   display: -moz-box;
@@ -245,7 +250,7 @@ a, button, select {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  color: #FFFFFF;
+  color: #000000;
   padding-right: 0.625rem; }
   .contact-number h2 {
     margin: 0px;
@@ -291,6 +296,9 @@ a, button, select {
 .no-padding {
   padding: 0px !important; }
 
+.no-margin {
+  margin: 0px; }
+
 .relative {
   position: relative; }
 
@@ -330,14 +338,6 @@ a, button, select {
 .column {
   display: flex;
   margin: 0 2.1875rem; }
-  .column:last-child ul:before {
-    content: ' ';
-    display: block;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    position: absolute;
-    left: -30px; }
 
 .row {
   display: flex; }
@@ -350,6 +350,15 @@ a, button, select {
   width: 100%;
   height: 2px;
   background: #FFFFFF; }
+
+.m-border-right:before {
+  content: ' ';
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  left: -30px; }
 
 .header {
   position: fixed;
@@ -547,6 +556,46 @@ a, button, select {
   -o-transform: translateY(-7px) rotate(-44deg);
   transform: translateY(-7px) rotate(-44deg); }
 
+.mobile-navigation {
+  height: 64px;
+  background: #FFFFFF;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  width: 100%; }
+  .mobile-navigation ul {
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px; }
+    .mobile-navigation ul li {
+      list-style: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+  .mobile-navigation .logo-mobile {
+    height: 45px;
+    margin: 10px 0px 0px 10px; }
+  .mobile-navigation .booknow {
+    font-size: 1rem;
+    padding: 0rem 0.75rem; }
+  .mobile-navigation .call-now {
+    padding: 1.25rem 1.25rem;
+    display: block; }
+  .mobile-navigation .mobile-toggle-menu {
+    padding: 0.75rem 1.25rem;
+    background: #000000; }
+
+.main-navgitaion-mobile {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1.875rem 1.875rem;
+  position: fixed;
+  z-index: 1;
+  top: 0px; }
+
 /* Font Size */
 /* Margins */
 /* Padding Mixins */
@@ -599,7 +648,10 @@ a, button, select {
     justify-content: center;
     align-items: center;
     flex: 1;
-    background: #fff; }
+    background: #fff;
+    overflow: hidden; }
+    .thumbnail-slider .thumbnail img {
+      height: 200px; }
 
 .btn-primary {
   padding: 0.9375rem 1.875rem;
@@ -744,6 +796,114 @@ a, button, select {
 .text-all-caps {
   text-transform: uppercase; }
 
+@media screen and (min-width: 361px) and (max-width: 960px) {
+  .text-120 {
+    font-size: 2.25rem;
+    line-height: 2.625rem; }
+
+  .text-100 {
+    font-size: 1.875rem; }
+
+  .text-80 {
+    font-size: 1.875rem;
+    line-height: 1.875rem; }
+
+  .text-70 {
+    font-size: 3.25rem; }
+
+  .text-60 {
+    font-size: 1.875rem;
+    line-height: 1.875rem; }
+
+  .text-42 {
+    font-size: 1.9375rem; }
+
+  .text-40 {
+    font-size: 1.875rem; }
+
+  .text-36 {
+    font-size: 1.5rem; }
+
+  .text-30 {
+    font-size: 1.375rem; }
+
+  .text-26 {
+    font-size: 1rem; }
+
+  .text-24 {
+    font-size: 1.125rem; }
+
+  .text-22 {
+    font-size: 1rem; }
+
+  .text-20 {
+    font-size: 0.875rem; }
+
+  .text-18 {
+    font-size: 0.8125rem; }
+
+  .text-16 {
+    font-size: 0.75rem; }
+
+  .text-14 {
+    font-size: 0.6875rem; }
+
+  .text-12 {
+    font-size: 0.625rem; } }
+@media screen and (min-width: 270px) and (max-width: 360px) {
+  .text-120 {
+    font-size: 2.25rem;
+    line-height: 2.625rem; }
+
+  .text-100 {
+    font-size: 1.875rem; }
+
+  .text-80 {
+    font-size: 1.875rem;
+    line-height: 1.875rem; }
+
+  .text-70 {
+    font-size: 3.25rem; }
+
+  .text-60 {
+    font-size: 1.875rem;
+    line-height: 1.875rem; }
+
+  .text-42 {
+    font-size: 1.9375rem; }
+
+  .text-40 {
+    font-size: 1.875rem; }
+
+  .text-36 {
+    font-size: 1.5rem; }
+
+  .text-30 {
+    font-size: 1.375rem; }
+
+  .text-26 {
+    font-size: 1rem; }
+
+  .text-24 {
+    font-size: 1.125rem; }
+
+  .text-22 {
+    font-size: 1rem; }
+
+  .text-20 {
+    font-size: 0.875rem; }
+
+  .text-18 {
+    font-size: 0.8125rem; }
+
+  .text-16 {
+    font-size: 0.75rem; }
+
+  .text-14 {
+    font-size: 0.6875rem; }
+
+  .text-12 {
+    font-size: 0.625rem; } }
 @media (min-width: 991px) and (max-width: 1440px) {
   .text-120 {
     font-size: 5rem; }

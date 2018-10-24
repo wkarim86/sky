@@ -17,6 +17,10 @@
         @include flex;
         @include flex-align(center,center);
         flex:1;
-        background:#fff;                        
+        background:#fff; 
+        overflow: hidden;
+        img{
+            height:200px;
+        }
     }
 }

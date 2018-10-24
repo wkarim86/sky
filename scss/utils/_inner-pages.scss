@@ -58,7 +58,10 @@ p{
 }
 
 .list{
-    border-bottom:1px solid transparentize($white, 0.6) !important;
+    border-top:1px solid transparentize($white, 0.8) !important;
+    &:first-child{
+        border-top:0px !important;
+    }
     dt{
         padding:0px;        
     }

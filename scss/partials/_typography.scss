@@ -11,6 +11,124 @@
     text-transform: uppercase;
 }
 
+@media screen and (min-width:361px) and (max-width:960px){
+    .text-120{
+        @include font-size(pixel2Rem(36));
+        line-height: pixel2Rem(42);
+    }
+    .text-100{
+        @include font-size(pixel2Rem(30));
+    }
+    
+    .text-80{
+        @include font-size(pixel2Rem(30));
+        line-height: pixel2Rem(30);
+    }
+    .text-70{
+        @include font-size(pixel2Rem(52));
+    }
+    .text-60{
+        @include font-size(pixel2Rem(30));
+        line-height: pixel2Rem(30);
+    }
+    .text-42{
+        @include font-size(pixel2Rem(31));
+    }
+    .text-40{
+        @include font-size(pixel2Rem(30));
+    }
+    .text-36{
+        @include font-size(pixel2Rem(24));
+    }
+    .text-30{
+        @include font-size(pixel2Rem(22));
+    }
+    .text-26{
+        @include font-size(pixel2Rem(16));
+    }
+    .text-24{
+        @include font-size(pixel2Rem(18));
+    }
+    .text-22{
+        @include font-size(pixel2Rem(16));
+    }
+    .text-20{
+        @include font-size(pixel2Rem(14));
+    }
+    .text-18{
+        @include font-size(pixel2Rem(13));
+    }
+    .text-16{
+        @include font-size(pixel2Rem(12));
+    }
+    .text-14{
+        @include font-size(pixel2Rem(11));
+    }
+    .text-12{
+        @include font-size(pixel2Rem(10));
+    }
+}
+
+
+@media screen and (min-width:270px) and (max-width:360px){
+    .text-120{
+        @include font-size(pixel2Rem(36));
+        line-height: pixel2Rem(42);
+    }
+    .text-100{
+        @include font-size(pixel2Rem(30));
+    }
+    
+    .text-80{
+        @include font-size(pixel2Rem(30));
+        line-height: pixel2Rem(30);
+    }
+    .text-70{
+        @include font-size(pixel2Rem(52));
+    }
+    .text-60{
+        @include font-size(pixel2Rem(30));
+        line-height: pixel2Rem(30);
+    }
+    .text-42{
+        @include font-size(pixel2Rem(31));
+    }
+    .text-40{
+        @include font-size(pixel2Rem(30));
+    }
+    .text-36{
+        @include font-size(pixel2Rem(24));
+    }
+    .text-30{
+        @include font-size(pixel2Rem(22));
+    }
+    .text-26{
+        @include font-size(pixel2Rem(16));
+    }
+    .text-24{
+        @include font-size(pixel2Rem(18));
+    }
+    .text-22{
+        @include font-size(pixel2Rem(16));
+    }
+    .text-20{
+        @include font-size(pixel2Rem(14));
+    }
+    .text-18{
+        @include font-size(pixel2Rem(13));
+    }
+    .text-16{
+        @include font-size(pixel2Rem(12));
+    }
+    .text-14{
+        @include font-size(pixel2Rem(11));
+    }
+    .text-12{
+        @include font-size(pixel2Rem(10));
+    }
+}
+
+
 
 @media (min-width:991px) and (max-width:1440px){
     .text-120{
