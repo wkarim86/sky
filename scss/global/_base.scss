@@ -84,6 +84,10 @@ a, button, select {
     padding: 0px !important;
 }
 
+.padding30{
+    padding:10px 30px !important;
+}
+
 .no-margin{
     margin:0px;
 }
@@ -160,3 +164,14 @@ a, button, select {
     }
         
 }
+#play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: url('../image/Play.png') no-repeat 50% 50%;
+    background-size: auto, cover;
+    z-index: 9999;
+  }

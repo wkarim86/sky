@@ -21,7 +21,11 @@ $(function(){
         infinite: true,
         arrows: true,
         prevArrow: $('.box-slider-controls .arrow.left'),
-        nextArrow: $('.box-slider-controls .arrow.right')
+        nextArrow: $('.box-slider-controls .arrow.right'),
+        responsive : [{
+            breakpoint: 960,
+            settings :"unslick"
+        }]
     }); 
 
 
@@ -29,8 +33,27 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        arrows: false,                
-        useCSS : false
+        arrows: false,                        
+        responsive : [{
+            breakpoint: 768,
+            settings : {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '10px',
+            }
+        },{
+            breakpoint: 800,
+            settings : {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                centerMode: false,
+                centerPadding: '10px',
+            } 
+        }
+    ]
     });
 
 
@@ -39,16 +62,32 @@ $(function(){
 
     /* Toggle Menu */
     $(".hamburger").click(function(){
-        $(this).toggleClass("is-active");
-        $('.main-navigation').css({"top" : $('.navbar').height() + 34 });
-        $('.main-navigation').toggleClass('close');
+        $(this).toggleClass("is-active");        
+        if($(this).data("toggle") == "mobile"){
+            let pos = ($(window).scrollTop() > $('.mobile-navigation').height() ) ? $(window).scrollTop() :  $('.mobile-navigation').height();
+            $('.main-navgitaion-mobile').css({"top" : $('.mobile-navigation').height() });
+            $('.main-navgitaion-mobile').toggleClass('close');
+        }else{
+            $('.main-navigation').css({"top" : $('.navbar').height() + 34 });
+            $('.main-navigation').toggleClass('close');
+        }
+        
       });
 
 
       /* Accordion */
-      $('.accordion').beefup({
+      $('.accordion, .menu-accordion').beefup({
         openSingle: true,
       });
+
+      $('.choose-language-accordion').beefup({
+        openSingle: true,
+      });
+
+
+      /* Video Player */
+      $(".video-player").simplePlayer();
+
 
 
 });
@@ -62,4 +101,10 @@ function doResize() {
     var fpc = fw*100/16;
     var fpc = Math.round(fpc*100)/100;
     $('html').css('font-size',fpc+'%');
+}
+
+function changeLanguage(elem){
+    $('.choose-language-accordion').find('.beefup__head a').html($(elem).html());
+    $('.choose-language-accordion').beefup().close();
+    $('input[name="language"]').val($(elem).data("value"));
 }

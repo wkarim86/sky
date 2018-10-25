@@ -15,6 +15,14 @@
         top:0px;
     }
 
+    .video-player{
+        height: 100%;
+        width:100%;
+        @include position(absolute,99);
+        left:0px;
+        top:0px;
+    }
+
     .overlay{
         @include flex;
         @include flex-align(center, center);

@@ -40,7 +40,111 @@
 
 .main-navgitaion-mobile{
     background: transparentize($secondary, 0.2);
-    @include padding(30,30);
-    @include position(fixed);
+    @include padding(0,30);
+    @include position(absolute);
     top:0px;
+    width:100%;
+    @include fontFamily(Gotham-Bold);
+
+    .menu-accordion{
+        @include padding(30,0);
+    }
+
+    .beefup__head{
+        @include padding(0,20);
+        @include position(relative);        
+        border-bottom:2px solid $border-color;
+        
+    }
+
+    .beefup__head, .beefup__head > a{        
+        color: $primary;         
+        text-decoration:none;
+
+        &.text-36{
+            font-size:pixel2Rem(30);
+        }
+
+        .expand{
+            @include position(absolute);
+            right:10px;
+            top: 20px;
+
+            i{
+                font-size:pixel2Rem(36);
+                color: $white;
+            }
+        }
+    }
+
+    .beefup__body{
+        @include padding(0,20);
+    }
+
+    .submenu-items{
+        list-style: none;
+        margin:0px;
+        padding:0px;
+        li{
+            a{
+                color:$nobel-gray;
+                font-size: pixel2Rem(18);
+                line-height: pixel2Rem(30);
+            }
+        }
+    }
+
+
+    .contact-detail-box{
+        @include margin(30,0);
+        @include padding(10,10);
+        @include border-vertical(2, $border-color);
+        @include flex;
+        @include flex-align(space-between,null);
+    }
+
+    .choose-language-accordion{
+        width:100px;
+        .beefup__head, .beefup__head > a{
+            color : $white;
+            border:0px;
+            @include fontFamily(D-DIN);
+            letter-spacing: 1px;
+            &.text-36{
+                font-size:pixel2Rem(18);
+            }            
+        }
+
+        .expand{
+            @include position(absolute);
+            right:10px;
+            top: 20px;
+
+            i{
+                font-size:pixel2Rem(20);
+                color: $white;
+            }
+        }
+
+        .submenu-items{
+            list-style: none;
+            margin:0px;
+            padding:0px;
+            li{
+                a{
+                    color:$nobel-gray;
+                    @include fontFamily(D-DIN);
+                    font-size: pixel2Rem(18);
+                    line-height: pixel2Rem(30);
+                }
+            }
+        }
+
+    }
+}
+
+.any-question-mobile{
+    @include flex;
+    @include flex-align(space-between, center);
+    @include padding(30,20);
 }

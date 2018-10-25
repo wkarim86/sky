@@ -17,6 +17,7 @@
   font-family: 'D-DIN-Bold';
   src: url(../fonts/D-DIN-Bold.otf); }
 /* Font Size */
+/* Border */
 /* Margins */
 /* Padding Mixins */
 /* Margin Mixin */
@@ -36,6 +37,13 @@
     height: auto;
     position: absolute;
     z-index: 1;
+    left: 0px;
+    top: 0px; }
+  .container .video-player {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
     left: 0px;
     top: 0px; }
   .container .overlay {

@@ -120,3 +120,33 @@
     width:100%;
     height: auto;
 }
+
+/* Border */
+
+@mixin border-all($width, $color, $style : solid){
+    border: $width $style $color;
+}
+
+@mixin border-left($width, $color, $style : solid){
+    border-left: $width $style $color;
+}
+
+@mixin border-right($width, $color, $style : solid){
+    border-right: $width $style $color;
+}
+@mixin border-top($width, $color, $style : solid){
+    border-top: $width $style $color;
+}
+@mixin border-bottom($width, $color, $style : solid){
+    border-bottom: $width $style $color;
+}
+
+@mixin border-vertical($width, $color, $style : solid){
+    border-top: $width $style $color;
+    border-bottom: $width $style $color;
+}
+
+@mixin border-horizontal($width, $color, $style : solid){
+    border-left: $width $style $color;
+    border-right: $width $style $color;
+}
