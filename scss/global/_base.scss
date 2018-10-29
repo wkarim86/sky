@@ -30,6 +30,11 @@ a, button, select {
 .bgcolor-black-700 {
     background: transparentize($secondary, 0.3);
 }
+
+.bgcolor-black{
+    background:#000;
+}
+
 .text-color-white{
     color:$white !important;
 }
@@ -164,14 +169,6 @@ a, button, select {
     }
         
 }
-#play {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background: url('../image/Play.png') no-repeat 50% 50%;
-    background-size: auto, cover;
-    z-index: 9999;
-  }
+.no-flex{
+    flex:0;
+}

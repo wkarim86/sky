@@ -63,10 +63,11 @@ $(function(){
     /* Toggle Menu */
     $(".hamburger").click(function(){
         $(this).toggleClass("is-active");        
-        if($(this).data("toggle") == "mobile"){
-            let pos = ($(window).scrollTop() > $('.mobile-navigation').height() ) ? $(window).scrollTop() :  $('.mobile-navigation').height();
+        if($(this).data("toggle") == "mobile"){            
+            $('html,body').animate({scrollTop : 0},1000);
             $('.main-navgitaion-mobile').css({"top" : $('.mobile-navigation').height() });
             $('.main-navgitaion-mobile').toggleClass('close');
+            $('.booknow-form-mobile').addClass('close');
         }else{
             $('.main-navigation').css({"top" : $('.navbar').height() + 34 });
             $('.main-navigation').toggleClass('close');
@@ -87,6 +88,19 @@ $(function(){
 
       /* Video Player */
       $(".video-player").simplePlayer();
+
+
+      /* Book Now Mobile Toggle */
+      $('.booknow-mobile').click(function(){
+          console.log($(this).text(), $(this).html());
+          if($(this).text() == "Book Now"){
+              $(this).text("Close");
+          }else{
+            $(this).text("Book Now");
+          }
+        $('.booknow-form-mobile').toggleClass('close');
+        $('.main-navgitaion-mobile').addClass('close');
+      });
 
 
 

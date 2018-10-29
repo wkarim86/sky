@@ -115,7 +115,7 @@
                     <a href="#" class="call-now"><img src="assets/image/call-icon.png" ></a>
                 </li>
                 <li>
-                    <button class="btn-primary booknow">Book Now</button>
+                    <button class="btn-primary booknow booknow-mobile">Book Now</button>
                 </li>
                 <li class="mobile-toggle-menu">                    
                         <div class="hamburger" data-toggle="mobile">
@@ -125,15 +125,51 @@
                         </div>
                 </li>
             </ul>
+
+            <!-- Book Now Form -->
+             <div class="booknow-form-mobile close">
+                    <div class="choose-activity bgcolor-white custom-select" data-toggle=".choose-activity-dropdown">
+                            <div class="form-control" >
+                                <label class="text-16 custom-select-label">Tandem Skydiving</label>
+                                <input type="hidden" name="activity" value="0" class="custom-select-value">
+                                <i class="material-icons text-30">arrow_drop_down</i>
+                            </div>
+        
+                            <!-- Dropdown -->
+                            <div class="dropdown choose-activity-dropdown close" >
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="text-16" data-value="0">Tandem Skydiving</a></li>
+                                    <li><a href="javascript:void(0);" class="text-16" data-value="1">Tandem Gyrocopter</a></li>
+                                    <li><a href="javascript:void(0);" class="text-16" data-value="2">Tandem Paramotor</a></li>
+                                </ul>
+                            </div>
+        
+                        </div>
+        
+                    <div class="choose-date bgcolor-white">
+                            <div class="form-control">
+                                <input type="text" name="date" class="input-plain text-16 datepicker" value="Date">
+                                <i class="material-icons text-30">arrow_drop_down</i>
+                            </div>
+                    
+                        </div>
+
+                    <div class="no-flex no-padding">
+                        <button class="btn-book bgcolor-black"><i class="material-icons">arrow_forward_ios</i></button>
+                    </div>
+             </div>
+           
         </div>
 
     </div>
 
 <!-- Banner 5/5 -->
     <div class="container height-5-of-5 height-4-of-5-md">
-          <div class="video-player" data-video="j54R3P76aS4" id="video"> <img src="assets/image/Lets-Fly.png" /> </div>
-            <div class="overlay">                                
-            </div>
+
+            <div class="video-player" data-video="j54R3P76aS4"> 
+                    <img src="assets/image/Lets-Fly.png" />                       
+                    <a href="javascript:void(0);" class="video-play-button play"><i class="material-icons text-100">play_circle_filled</i></a>                     
+                </div>
             <!-- No Call to action button -->        
         </div>
 
@@ -459,7 +495,7 @@
 
 
 <!-- Enquire Form --> 
-<section id="enquire-form">
+<section class="form-container">
 <div class="container height-5-of-5 height-5-of-5-md">
     <img src="assets/image/MasonHoldenPhotography-(2-of-13).jpg" class="image">      
     <div class="overlay form-padding">

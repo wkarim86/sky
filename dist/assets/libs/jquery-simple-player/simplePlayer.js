@@ -19,7 +19,8 @@ window.onYouTubeIframeAPIReady = function() {
 
 		var	video = $(this);
 
-		var play = $('<div />', { id: 'play' }).hide();
+		
+		//var play = $('<div />', { class: 'play' }).hide();
 
 		var defaults = {
 				autoplay: 1,
@@ -39,10 +40,11 @@ window.onYouTubeIframeAPIReady = function() {
 		// onYouTubeIframeAPIReady
 
 		YTdeferred.done(function(YT) {
-			play.appendTo( video ).fadeIn('slow');
+			//play.appendTo( video ).fadeIn('slow');
 		});
 
 		function onPlayerStateChange(event) {
+			console.log(data);
 			if (event.data == YT.PlayerState.ENDED) {
 				play.fadeIn(500);
 			}
@@ -55,27 +57,52 @@ window.onYouTubeIframeAPIReady = function() {
 			});
 		}
 
-		play.bind('click', function () {
+		video.each(function(){
+			var that = $(this);			
+			that.find('.play').bind('click', function(){			
 
-			if ( !$('#player' ).length ) {
+					$('<iframe />', {
+						class: 'player',
+						src: 'https://www.youtube.com/embed/' + that.data('video') + '?' + $.param(defaults)
+					})
+					.attr({ width: that.width(), height: that.height(), seamless: 'seamless' })
+					.css('border', 'none')
+					.appendTo( that );
 
-				$('<iframe />', {
-					id: 'player',
-					src: 'https://www.youtube.com/embed/' + video.data('video') + '?' + $.param(defaults)
-				})
-				.attr({ width: video.width(), height: video.height(), seamless: 'seamless' })
-				.css('border', 'none')
-				.appendTo( video );
+					that.children('img').hide();
 
-				video.children('img').hide();
+					$(this).css('background-image', 'url(play-button.png), url(' + that.children().attr('src') + ')').hide();
+		
+					player = new YT.Player('.player', {events: {'onStateChange': onPlayerStateChange, 'onReady': onPlayerReady}});
+				
 
-				$(this).css('background-image', 'url(play-button.png), url(' + video.children().attr('src') + ')').hide();
+				$(this).hide();
+			});
+		})
+		
+
+		
+		// play.bind('click', function () {
+
+		// 	if ( !$('.player' ).length ) {
+
+		// 		$('<iframe />', {
+		// 			class: 'player',
+		// 			src: 'https://www.youtube.com/embed/' + video.data('video') + '?' + $.param(defaults)
+		// 		})
+		// 		.attr({ width: video.width(), height: video.height(), seamless: 'seamless' })
+		// 		.css('border', 'none')
+		// 		.appendTo( video );
+
+		// 		video.children('img').hide();
+
+		// 		$(this).css('background-image', 'url(play-button.png), url(' + video.children().attr('src') + ')').hide();
 	
-				player = new YT.Player('player', {events: {'onStateChange': onPlayerStateChange, 'onReady': onPlayerReady}});
-			}
+		// 		player = new YT.Player('.player', {events: {'onStateChange': onPlayerStateChange, 'onReady': onPlayerReady}});
+		// 	}
 
-			$(this).hide();
-		});
+		// 	$(this).hide();
+		// });
 
 		return this;
 	};

@@ -11,98 +11,124 @@
     <link href="assets/libs/slick/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/slick/slick.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/beefup/css/jquery.beefup.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
     
 </head>
 
 <body>
+    <!-- Header and Navigation -->
     <div class="header">
         <div class="row">
-            <div class="col-2 align-content-center">
+            <div class="visible-lg">
                 <div class="logo">
                     <a href="#"><img src="assets/image/logo.png"></a>
                 </div>
             </div>
-
-
+                
             <!-- Navigation and Dropdown -->
-            <div class="col-10 no-padding-right align-content-right">
-                    <div class="navbar">
+            <div class="visible-lg">
+                <div class="navbar">
 
-                            <!-- Choose Activity Dropdown -->
-                            <div class="navbar-item choose-activity bgcolor-white custom-select" data-toggle=".choose-activity-dropdown">
-                                <div class="form-control" >
-                                    <label class="text-20 text-all-caps custom-select-label">Tandem Skydiving</label>
-                                    <input type="hidden" name="activity" value="0" class="custom-select-value">
+                    <!-- Choose Activity Dropdown -->
+                    <div class="navbar-item choose-activity bgcolor-white custom-select" data-toggle=".choose-activity-dropdown">
+                        <div class="form-control" >
+                            <label class="text-20 text-all-caps custom-select-label">Tandem Skydiving</label>
+                            <input type="hidden" name="activity" value="0" class="custom-select-value">
+                            <i class="material-icons text-30">arrow_drop_down</i>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown choose-activity-dropdown close" >
+                            <ul>
+                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="0">Tandem Skydiving</a></li>
+                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="1">Tandem Gyrocopter</a></li>
+                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="2">Tandem Paramotor</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Choose Date -->
+                    <a href="#" class="navbar-item choose-date bgcolor-white">
+                        <div class="form-control">
+                            <input type="text" name="date" class="input-plain text-20 text-all-caps datepicker" value="Date">
+                            <i class="material-icons text-30">arrow_drop_down</i>
+                        </div>
+                        <!--
+                            <span>Date</span>
+                            <i class="material-icons icon-size-md">arrow_drop_down</i> -->
+                    </a>
+
+                    <!-- Book Now -->
+                    <a href="#" class="navbar-item booknow text-20">
+                            Book Now
+                        </a>
+
+
+                    <div class="navbar-item bgcolor-white contact-number">
+                        <h2 class="text-42">+971800</h2>
+                        <div class="toll-number text-20">
+                            SKY.DIVE <br> 75903483
+                        </div>
+                    </div>    
+
+                    <div class="navbar-item choose-language text-20 bgcolor-black-700 custom-select" data-toggle=".choose-language-dropdown">
+                            <div class="form-control" >
+                                    <label class="text-20 text-all-caps custom-select-label">English</label>
+                                    <input type="hidden" name="language" value="0" class="custom-select-value">
                                     <i class="material-icons text-30">arrow_drop_down</i>
                                 </div>
         
                                 <!-- Dropdown -->
-                                <div class="dropdown choose-activity-dropdown close" >
+                                <div class="dropdown choose-language-dropdown close" >
                                     <ul>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="0">Tandem Skydiving</a></li>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="1">Tandem Gyrocopter</a></li>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="2">Tandem Paramotor</a></li>
+                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="en">English</a></li>
+                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ar">Arabic</a></li>
+                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ch">Chinese</a></li>
                                     </ul>
                                 </div>
-        
-                            </div>
-        
-                            <!-- Choose Date -->
-                            <a href="#" class="navbar-item choose-date bgcolor-white">
-                                <div class="form-control">
-                                    <input type="text" name="date" class="input-plain text-20 text-all-caps datepicker" value="Date">
-                                    <i class="material-icons text-30">arrow_drop_down</i>
-                                </div>
-                                <!--
-                                    <span>Date</span>
-                                    <i class="material-icons icon-size-md">arrow_drop_down</i> -->
-                            </a>
-        
-                            <!-- Book Now -->
-                            <a href="#" class="navbar-item booknow text-20">
-                                    Book Now
-                                </a>
-        
-        
-                            <div class="navbar-item bgcolor-black-700 contact-number">
-                                <h2 class="text-42">+971800</h2>
-                                <div class="toll-number text-20">
-                                    SKY.DIVE <br> 75903483
-                                </div>
-                            </div>    
-        
-                            <div class="navbar-item choose-language text-20 bgcolor-black-700 custom-select" data-toggle=".choose-language-dropdown">
-                                    <div class="form-control" >
-                                            <label class="text-20 text-all-caps custom-select-label">English</label>
-                                            <input type="hidden" name="activity" value="0" class="custom-select-value">
-                                            <i class="material-icons text-30">arrow_drop_down</i>
-                                        </div>
-                
-                                        <!-- Dropdown -->
-                                        <div class="dropdown choose-language-dropdown close" >
-                                            <ul>
-                                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="en">English</a></li>
-                                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ar">Arabic</a></li>
-                                                <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ch">Chinese</a></li>
-                                            </ul>
-                                        </div>
-                            </div>
-                            <!-- Toggle Menu -->
-                            <div class="navbar-item toggle-menu bgcolor-black-700">
-                                <div class="hamburger">
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </div>                       
-                            </div>
-        
                     </div>
-            </div>
+                    <!-- Toggle Menu -->
+                    <div class="navbar-item toggle-menu bgcolor-black-700">
+                        <div class="hamburger" data-toggle="desktop">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>                       
+                    </div>
+
+                </div>
+           </div>
+            
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-navigation">
+            <ul>
+                <li class="flex-grow">
+                    <a href="#"><img src="assets/image/logo.png" class="logo-mobile"></a>
+                </li>
+                <li>
+                    <a href="#" class="call-now"><img src="assets/image/call-icon.png" ></a>
+                </li>
+                <li>
+                    <button class="btn-primary booknow">Book Now</button>
+                </li>
+                <li class="mobile-toggle-menu">                    
+                        <div class="hamburger" data-toggle="mobile">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                </li>
+            </ul>
         </div>
 
     </div>
-    <div class="container height-3-of-5">
+    <div class="container height-3-of-5 height-3-of-5-md height-3-of-5-sm">
         <img src="assets/image/requirement-banner.jpg" class="image">
         <div class="overlay">                
             <!-- <a href="#" class="video-play-button"><i class="material-icons text-100">play_circle_filled</i></a>             -->
@@ -249,7 +275,7 @@
             <div class="column flex-col">
                 <div class="column">
                     <article class="beefup">
-                            <h4 class="text-36"><a href="#">Tandem Skydiving</a></h4>
+                            <h4 class="beefup__head text-36"><a href="#">Tandem Skydiving</a></h4>
                             <div class="beefup__body">
                                 <ul>
                                     <li><a href="javascript:void(0);" class="text-24">Tandem jumps</a></li>
@@ -272,7 +298,7 @@
                        
             <div class="column">
                 <article class="beefup">
-                        <h4 class="text-36"><a href="#">School</a></h4>
+                        <h4 class="beefup__head text-36"><a href="#">School</a></h4>
                         <div class="beefup__body">
                                 <ul> 
                                     <li><a href="javascript:void(0);" class="text-24">Learn to skydive</a></li>
@@ -290,14 +316,14 @@
     
         <div class="column">
             <div class="column">
-                <div class="contact-number">
+                <div class="contact-number text-color-white">
                     <h2 class="text-42">+971800</h2>
                     <div class="toll-number text-20">
                         SKY.DIVE <br> 75903483
                     </div>
                 </div>
             </div>
-            <div class="flex-grow column align-content-center">
+            <div class="flex-grow column align-content-center no-margin">
                 <div class="vertical-line"></div>
             </div>
     
@@ -306,7 +332,7 @@
             </div>
             <div class="column align-content-center">
                     <a href="#" class="btn-primary text-24">Contact Us</a>                
-                </div>
+            </div>
     
         </div>
             
@@ -314,8 +340,8 @@
     
        
     
-            <div class="flex-col">
-                <ul>
+            <div class="column flex-col">
+                <ul class="m-border-right">
                     <li><a href="#" class="text-24">About us</a></li>
                     <li><a href="#" class="text-24">Media center</a></li>
                     <li><a href="#" class="text-24">Skydive Dubai store</a></li>
@@ -330,14 +356,109 @@
         
     </div>
 
+  <!-- Dropdown Menu for Mobile --> 
+  <div class="main-navgitaion-mobile close">
+    <article class="beefup menu-accordion">
+        <h4 class="beefup__head text-36"><a href="#">Skydiving</a> <span class="expand"><i class="material-icons">expand_more</i></span></h4>
+        <div class="beefup__body">
+            <ul class="submenu-items">
+                <li><a href="javascript:void(0);" class="text-24">Tandem jumps</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Experienced skydiving</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Special requests</a></li>
+            </ul>
+            </div>
+    </article> 
+
+    <article class="beefup menu-accordion">
+        <h4 class="beefup__head text-36"><a href="#">Gyrocopter</a> <span class="expand"><i class="material-icons">expand_more</i></span></h4>
+        <div class="beefup__body">
+            <ul class="submenu-items">
+                <li><a href="javascript:void(0);" class="text-24">Tandem jumps</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Experienced skydiving</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Special requests</a></li>
+            </ul>
+            </div>
+    </article> 
+
+    <article class="beefup menu-accordion">
+        <h4 class="beefup__head text-36"><a href="#">Paramotor</a> <span class="expand"><i class="material-icons">expand_more</i></span></h4>
+        <div class="beefup__body">
+            <ul class="submenu-items">
+                <li><a href="javascript:void(0);" class="text-24">Tandem jumps</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Experienced skydiving</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Special requests</a></li>
+            </ul>
+            </div>
+    </article> 
+    <article class="beefup menu-accordion">
+        <h4 class="beefup__head text-36"><a href="#">School</a> <span class="expand"><i class="material-icons">expand_more</i></span></h4>
+        <div class="beefup__body">
+            <ul class="submenu-items">
+                <li><a href="javascript:void(0);" class="text-24">Learn to skydive</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Learn to fly a paramotor</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Military training</a></li>
+            </ul>
+            </div>
+    </article> 
+
+    <article class="beefup">        
+        <div class="beefup__body padding30">
+            <ul class="submenu-items">
+                <li><a href="javascript:void(0);" class="text-24">About us</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Media centre</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Skydive Dubai store</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Gift & vouchers</a></li>
+                <li><a href="javascript:void(0);" class="text-24">FAQs</a></li>
+                <li><a href="javascript:void(0);" class="text-24">Careers</a></li>
+            </ul>
+            </div>
+    </article> 
+    <article class="contact-detail-box">
+        <div class="contact-number text-color-white">
+            <h2 class="text-48">+971800</h2>
+            <div class="toll-number text-20">
+                SKY.DIVE <br> 75903483
+            </div>
+        </div>
+
+       
+           <div class="beefup choose-language-accordion">
+            <h4 class="beefup__head text-36"><a href="#">English</a> <span class="expand"><i class="material-icons">expand_more</i></span></h4>
+            <div class="beefup__body">
+                <ul class="submenu-items">
+                    <li><a onclick="javascript:changeLanguage(this);" data-value="en" class="text-24">English</a></li>
+                    <li><a onclick="javascript:changeLanguage(this);" data-value="ar" class="text-24">Arabic</a></li>
+                    <li><a onclick="javascript:changeLanguage(this);" data-value="ch" class="text-24">Chinese</a></li>                                                            
+                </ul>
+                <input type="hidden" name="language" value="en">
+            </div>
+           </div>
+
+
+    </article>
+
+    <div class="any-question-mobile">
+        <div>
+            <h3 class="heading-white text-30">Any question ?</h3>
+        </div>
+        <div class="align-content-center">
+                <a href="#" class="btn-primary text-24">Contact Us</a>                
+        </div>
+    </div>
+  
+    
+
+  </div>
+
 <script src="assets/libs/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="assets/libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js" type="text/javascript"></script>
 <script src="assets/libs/flatpickr/flatpickr.js" type="text/javascript"></script>
 <script src="assets/libs/slick/slick.js" type="text/javascript"></script>
 <script src="assets/libs/beefup/js/jquery.beefup.min.js" type="text/javascript"></script>
+<script src="assets/libs/fancybox/jquery.fancybox.min.js" type="text/javascript"></script>
+<script src="assets/libs/jquery-simple-player/simplePlayer.js" type="text/javascript"></script>
 <script src="assets/js/custom-select.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
-
 </body>
 
 </html> 
