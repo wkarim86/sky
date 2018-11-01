@@ -379,6 +379,36 @@ a, button, select {
 .no-flex {
   flex: 0; }
 
+.bgcover {
+  background-repeat: no-repeat !important;
+  background-size: cover !important; }
+
+.faq-questions {
+  padding-bottom: 6.25rem; }
+  .faq-questions h3 {
+    margin: 0px;
+    letter-spacing: -3px; }
+  .faq-questions select {
+    color: #FFFFFF;
+    font-family: "Gotham Bold";
+    background: transparent url("../image/select-arrow.png") right center no-repeat;
+    font-size: 3.75rem;
+    letter-spacing: -3px;
+    border: 0px;
+    border-bottom: 2px solid #FFFFFF;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0px 15px;
+    padding-right: 20px;
+    /* IE hack */ }
+    .faq-questions select::-ms-expand {
+      display: none; }
+    .faq-questions select option {
+      font-size: 1.875rem;
+      color: #000000;
+      background: transparent; }
+
 .header {
   position: fixed;
   width: 100%;
@@ -1176,6 +1206,16 @@ a, button, select {
 
   .text-12 {
     font-size: 0.75rem; } }
+.news .overlay {
+  justify-content: flex-start !important; }
+  .news .overlay .banner-title {
+    text-align: left;
+    margin-top: 40px; }
+  .news .overlay .date {
+    text-align: left;
+    width: 90%;
+    margin-top: 40px; }
+
 .form {
   margin-top: 4.375rem; }
   .form .form-control {

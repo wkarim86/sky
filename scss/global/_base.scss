@@ -172,3 +172,43 @@ a, button, select {
 .no-flex{
     flex:0;
 }
+
+.bgcover{
+    background-repeat: no-repeat !important;
+    background-size:cover !important;
+}
+
+.faq-questions{
+    padding-bottom:pixel2Rem(100);
+    h3{
+        margin:0px;
+        letter-spacing: -3px;
+    }
+
+    select{
+        color:$white;
+        @include fontFamily(Gotham-Bold);
+        background:transparent url('../image/select-arrow.png') right center no-repeat;        
+        font-size:pixel2Rem(60);
+        letter-spacing: -3px;
+        border:0px;
+        border-bottom:2px solid $white;       
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin:0px 15px;
+        padding-right:20px;
+        
+
+        /* IE hack */
+        &::-ms-expand{
+            display:none;
+        }
+
+        option{
+            font-size:pixel2Rem(30);
+            color:$secondary;
+            background:transparent;
+        }
+    }
+}

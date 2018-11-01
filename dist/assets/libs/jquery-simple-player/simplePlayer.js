@@ -70,6 +70,7 @@ window.onYouTubeIframeAPIReady = function() {
 					.appendTo( that );
 
 					that.children('img').hide();
+					$('.banner-title, .btn-cta', that).hide();
 
 					$(this).css('background-image', 'url(play-button.png), url(' + that.children().attr('src') + ')').hide();
 		

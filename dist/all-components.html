@@ -85,9 +85,9 @@
                                 <!-- Dropdown -->
                                 <div class="dropdown choose-language-dropdown close" >
                                     <ul>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="en">English</a></li>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ar">Arabic</a></li>
-                                        <li><a href="javascript:void(0);" class="text-20 text-all-caps" data-value="ch">Chinese</a></li>
+                                        <li><a href="javascript:void(0);" onclick="javascript:changeLanguage(this);" class="text-20 text-all-caps" data-value="en">English</a></li>
+                                        <li><a href="javascript:void(0);" onclick="javascript:changeLanguage(this);" class="text-20 text-all-caps" data-value="ar">Arabic</a></li>
+                                        <li><a href="javascript:void(0);" onclick="javascript:changeLanguage(this);" class="text-20 text-all-caps" data-value="ch">Chinese</a></li>
                                     </ul>
                                 </div>
                     </div>
@@ -167,15 +167,16 @@
     <div class="container height-5-of-5 height-4-of-5-md">
 
             <div class="video-player" data-video="j54R3P76aS4"> 
-                    <img src="assets/image/Lets-Fly.png" />                       
-                    <a href="javascript:void(0);" class="video-play-button play"><i class="material-icons text-100">play_circle_filled</i></a>                     
+                    <img data-src="assets/image/Lets-Fly.png" class="img2bg" />                       
+                    <a href="javascript:void(0);" class="video-play-button play"><i class="material-icons text-100">play_circle_filled</i></a>                   
                 </div>
-            <!-- No Call to action button -->        
+            <!-- No Call to action button -->  
+                
         </div>
 
 <!-- Banner 5/5 with Play button -->
 <section class="container height-5-of-5 height-4-of-5-md">
-        <img src="assets/image/MasonHoldenPhotography-(3-of-23).jpg" class="image"/>
+        <img src="assets/image/MasonHoldenPhotography-(3-of-23).jpg" class="image img2bg"/>
         <div class="overlay">
                 <a href="#" class="video-play-button"><i class="material-icons text-100">play_circle_filled</i></a>   
                 <h3 class="banner-title text-120">Become a skydiver</h3>
@@ -257,7 +258,7 @@
         </div>
         
 
-    </section>    
+</section>    
 
 <!-- Slider -->
  <section class="container height-4-of-5 height-3-of-5-md">
@@ -431,8 +432,8 @@
 </section>
 
 <!-- Accordion -->   
-<section class="flex container inner-bg inner-container align-content-center " style="background-image: url(assets/image/requirement-pg-bg.jpg);">
-    
+<section class="flex container inner-bg inner-container align-content-center ">
+    <img src="assets/image/requirement-pg-bg.jpg" class="img2bg">
     <article class="content width-4-of-5 width-5-of-5-sm">
         <h3 class="page-title text-36">Canopy piloting</h3>
         <div class="row content-padding">
@@ -491,8 +492,134 @@
         </div>
     </article>
     
-    </section>
+</section>
 
+
+<!-- FAQs -->   
+<section class="faqs flex container inner-bg inner-container align-content-center flex-row">
+    <img src="assets/image/requirement-pg-bg.jpg" class="img2bg">
+   
+    
+     <div class="faq-questions flex align-content-center">
+                <h3 class="text-60 heading-white">I'd like to know about </h3> 
+                <select>
+                    <option>Tandem SKydiving</option>
+                    <option>Tandem Gyrocopter</option>
+                    <option>Tandem Paramotor</option>
+                </select>
+        </div>       
+    
+    <article class="content width-4-of-5 width-5-of-5-sm">
+            
+        <h3 class="page-title text-36">Tandem Skydiving</h3>
+        <div class="row content-padding">
+            <div class="column flex-grow flex-row">
+                    <dl class="beefup accordion list">
+                        <dt class="beefup__head">
+                            <h2 class="subheading text-36"><span class="number">1. </span>How do I book a tandem skydive? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                        </dt>
+                        <dd class="beefup__body">                                    
+                            <p class="para text-18">Tandem skydives at the Palm and Desert Campus dropzones can be reserved online through our secure booking facility or purchased in person.
+                            </p>
+                        </dd>    
+                            
+                    </dl> 
+                    <dl class="beefup accordion list">
+                            <dt class="beefup__head">
+                                <h2 class="subheading text-36"><span class="number">2. </span>Can I purchase a skydive as a gift? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                            </dt>
+                            <dd class="beefup__body">                                    
+                               
+                            </dd>    
+                                
+                    </dl>
+    
+                    <dl class="beefup accordion list">
+                        <dt class="beefup__head">
+                            <h2 class="subheading text-36"><span class="number">3. </span>What is a tandem skydive? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                        </dt>
+                        <dd class="beefup__body">                                    
+                            
+                        </dd>    
+                                
+                    </dl> 
+                    <dl class="beefup accordion list">
+                        <dt class="beefup__head">
+                            <h2 class="subheading text-36"><span class="number">4. </span>I haven't made a booking. Can I still skydive? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                        </dt>
+                        <dd class="beefup__body">                                    
+                            
+                        </dd>    
+                                
+                    </dl> 
+
+                    <dl class="beefup accordion list">
+                        <dt class="beefup__head">
+                            <h2 class="subheading text-36"><span class="number">5. </span>How fast do you fall? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                        </dt>
+                        <dd class="beefup__body">                                    
+                            
+                        </dd>    
+                                
+                    </dl>
+                    
+                    <dl class="beefup accordion list">
+                        <dt class="beefup__head">
+                            <h2 class="subheading text-36"><span class="number">6. </span>How long does freefall last? <span class="collapse"><i class="material-icons">remove_circle_outline</i></span></h2>
+                        </dt>
+                        <dd class="beefup__body">                                    
+                            
+                        </dd>    
+                                
+                    </dl> 
+            </div>           
+        </div>
+    </article>
+    
+</section>
+
+
+<!-- News -->
+<section class="container">
+        <div class="box-sliders layout-5050 news">
+            <div class="slides">
+                <div class="height-4-of-5 height-3-of-5-md height-2-of-5-sm">
+                    <img src="assets/image/Step-04b.jpg" class="image">
+                    <div class="overlay">
+                            <h3 class="banner-title text-60 width-3-of-5">Skyhub Dubai to launch a Gyrocopter Tag-a-friend contest</h3>
+                            <span class="date text-36 heading-white">1 Nov 2018</span>                            
+                    </div>
+                        <!-- Call to action button -->
+                    <div class="btn-cta">
+                            <button class="btn-primary  text-24">Meet our instructors</button>
+                    </div>
+                    
+                </div>
+    
+    
+            </div> 
+            <div class="slides">
+                    <div class="height-4-of-5 height-3-of-5-md height-2-of-5-sm">
+                        <img src="assets/image/img45.jpg" class="image">
+                        <div class="overlay">
+                                <h3 class="banner-title text-60 width-3-of-5">Birthday promotion at Skydive Dubai’s Palm DZ</h3>
+                                <span class="date text-36 heading-white">1 Nov 2018</span>   
+                                
+                        </div>
+                        <!-- Call to action button -->
+                        <div class="btn-cta">
+                                <button class="btn-primary  text-24">TIPS FOR A BETTER EXPERIENCE</button>
+                        </div>                        
+                    </div>
+        
+            </div>
+
+            
+        
+        </div>
+        
+
+</section> 
 
 <!-- Enquire Form --> 
 <section class="form-container">

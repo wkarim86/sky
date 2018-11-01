@@ -33,7 +33,7 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        arrows: false,                        
+        arrows: false,            
         responsive : [{
             breakpoint: 768,
             settings : {
@@ -51,6 +51,7 @@ $(function(){
                 infinite: true,
                 centerMode: false,
                 centerPadding: '10px',
+                rtl: true
             } 
         }
     ]
@@ -102,23 +103,45 @@ $(function(){
         $('.main-navgitaion-mobile').addClass('close');
       });
 
-
+/* Cover Image tag to background */
+imagetoBackground();
 
 });
 
-function doResize() {
-    // FONT SIZE
-    var ww = $('body').width();
-    var maxW = 1920;
-    ww = Math.min(ww, maxW);
-    var fw = ww*(10/maxW);
-    var fpc = fw*100/16;
-    var fpc = Math.round(fpc*100)/100;
-    $('html').css('font-size',fpc+'%');
-}
 
 function changeLanguage(elem){
     $('.choose-language-accordion').find('.beefup__head a').html($(elem).html());
     $('.choose-language-accordion').beefup().close();
     $('input[name="language"]').val($(elem).data("value"));
+    var language = $(elem).data("value");
+    $('.slick-slider').attr("dir", "ltr");
+    switch(language){
+        case "en":
+            $('html').attr("dir","");            
+        break;
+        case "ar" : 
+            $('html').attr("dir","rtl");
+           
+            break;
+        case "ch":
+            $('html').attr("dir","");
+            
+            break;
+        default :
+            $('html').attr("dir","");            
+            break;
+    }
+    
+}
+
+
+
+/* Image to Background */
+function imagetoBackground(){
+    $('.img2bg').each(function(){
+        let src = $(this).attr("src") || $(this).data("src");
+        let target = $(this).data("target");
+        $(this).parent().addClass('bgcover').css({'background' : 'url("' + src+ '")'});
+        $(this).hide();
+    });
 }
