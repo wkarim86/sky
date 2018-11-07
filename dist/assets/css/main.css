@@ -734,11 +734,11 @@ a, button, select {
       .main-navgitaion-mobile .choose-language-accordion .expand i {
         font-size: 1.25rem;
         color: #FFFFFF; }
-    .main-navgitaion-mobile .choose-language-accordion .submenu-items {
+    .main-navgitaion-mobile .choose-language-accordion .submenu-items, .main-navgitaion-mobile .choose-language-accordion .language-switcher-locale-url {
       list-style: none;
       margin: 0px;
       padding: 0px; }
-      .main-navgitaion-mobile .choose-language-accordion .submenu-items li a {
+      .main-navgitaion-mobile .choose-language-accordion .submenu-items li a, .main-navgitaion-mobile .choose-language-accordion .language-switcher-locale-url li a {
         color: #B6B3B1;
         font-family: "D-DIN";
         font-size: 1.125rem;
@@ -1371,6 +1371,87 @@ footer {
       .social-icons li a:hover {
         color: #E1221D; }
 
+.ad-notification {
+  width: 540px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 99;
+  bottom: 5%;
+  right: -540px;
+  opacity: 0; }
+  .ad-notification .close-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    top: 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Arial Black;
+    text-align: center; }
+  .ad-notification .ad-notification-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-family: "Gotham Book"; }
+    .ad-notification .ad-notification-container > div:first-child {
+      padding: 20px; }
+    .ad-notification .ad-notification-container p {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 0px;
+      margin-bottom: 40px;
+      letter-spacing: -1px; }
+    .ad-notification .ad-notification-container .links {
+      display: flex; }
+      .ad-notification .ad-notification-container .links a {
+        font-family: "Gotham Bold";
+        color: #E1221D;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        padding-right: 20px; }
+        .ad-notification .ad-notification-container .links a:hover {
+          text-decoration: none; }
+  .ad-notification.show {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards; }
+
+@keyframes slide-in {
+  100% {
+    opacity: 1;
+    right: 0px; } }
+@media (min-width: 320px) and (max-width: 640px) {
+  .ad-notification {
+    width: 290px;
+    height: 110px;
+    left: 50%;
+    margin-left: -145px;
+    right: auto; }
+    .ad-notification .ad-notification-container > div:first-child {
+      padding: 10px; }
+    .ad-notification .ad-notification-container p {
+      font-size: 0.75rem;
+      margin-bottom: 20px; }
+    .ad-notification .ad-notification-container img {
+      height: 110px; }
+    .ad-notification .ad-notification-container .links a {
+      font-size: 0.5rem;
+      padding-right: 10px; }
+      .ad-notification .ad-notification-container .links a:last-child {
+        padding-right: 0px; }
+    .ad-notification .close-arrow {
+      font-size: 0.625rem;
+      width: 20px;
+      height: 20px;
+      line-height: 20px; } }
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;

@@ -1,9 +1,16 @@
 $(function(){
-    //$('select').niceSelect();
-    $('.datepicker').flatpickr({
+
+    var enableDates = [{
+        from: '2018-11-05',
+        to : '2018-11-15'
+    }];
+    
+    var flatpikr = $('.datepicker').flatpickr({
         dateFormat: "Y-m-d",
-        disable : ['2018-10-23']
+        enable : enableDates
     });
+
+    
 
     /* Testimonial Slider */
     $('.testimonial').slick({
@@ -106,6 +113,14 @@ $(function(){
 /* Cover Image tag to background */
 imagetoBackground();
 
+/* Ads notification banner */
+setTimeout(function(){
+    $('.ad-notification').addClass('show');
+},2000);
+$('.ad-notification .close-arrow').on('click', function(){
+    $('.ad-notification').removeClass('show');
+});
+
 });
 
 
@@ -117,18 +132,28 @@ function changeLanguage(elem){
     $('.slick-slider').attr("dir", "ltr");
     switch(language){
         case "en":
-            $('html').attr("dir","");            
+            $('html').attr("dir","");      
+            $('link[href~="assets/css/ar.css"]').remove();
+            flatpickr.localize(flatpickr.l10ns.en);
+            flatpickr(".datepicker");
         break;
         case "ar" : 
             $('html').attr("dir","rtl");
-           
+            $('head').append('<link href="assets/css/ar.css" rel="stylesheet" type="text/css">');
+            flatpickr.localize(flatpickr.l10ns.ar);
+            flatpickr(".datepicker");
             break;
         case "ch":
             $('html').attr("dir","");
-            
+            $('link[href~="assets/css/ar.css"]').remove();
+            flatpickr.localize(flatpickr.l10ns.en);
+            flatpickr(".datepicker");
             break;
         default :
             $('html').attr("dir","");            
+            $('link[href~="assets/css/ar.css"]').remove();
+            flatpickr.localize(flatpickr.l10ns.en);
+            flatpickr(".datepicker");
             break;
     }
     

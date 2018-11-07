@@ -129,6 +129,27 @@
   .visible-sm {
     display: block; } }
 @media (min-width: 320px) and (max-width: 375px) {
+  /* Toggle Menu */
+  .mobile-navigation .mobile-toggle-menu {
+    padding: 0.75rem 0.8rem;
+    align-items: center; }
+
+  .hamburger .line {
+    width: 20px;
+    margin: 6px auto; }
+
+  .hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    -ms-transform: translateY(10px) rotate(45deg);
+    -o-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg); }
+
+  .hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-6px) rotate(-44deg);
+    -ms-transform: translateY(-6px) rotate(-44deg);
+    -o-transform: translateY(-6px) rotate(-44deg);
+    transform: translateY(-6px) rotate(-44deg); }
+
   .booknow-form-mobile .choose-activity {
     width: 45%;
     padding: 0px 5px 0px 10px; }
@@ -164,7 +185,38 @@
     text-align: left;
     width: 90%;
     margin-top: 20px;
-    font-size: 0.875rem; } }
+    font-size: 0.875rem; }
+
+  /* Testimonials */
+  .testimonial .slides .client-text p {
+    font-size: 0.875rem !important; }
+
+  .testimonial .slides .client-text p strong {
+    font-size: 1.125rem !important; }
+
+  .testimonial .slides .client-text {
+    padding: 0rem 0.9375rem; }
+
+  #testimonials .slider-controls {
+    top: calc(100vh - 57vh) !important; }
+
+  #testimonials .arrow {
+    padding: 5px; }
+
+  /*mega menu accordion */
+  .main-navgitaion-mobile .beefup__head.text-36, .main-navgitaion-mobile .beefup__head > a.text-36 {
+    font-size: 1.25rem; }
+
+  .main-navgitaion-mobile .submenu-items li a {
+    font-size: 0.875rem; }
+
+  /* font size */
+  .text-30 {
+    font-size: 1.125rem; }
+
+  /* buttons */
+  .btn-primary {
+    padding: 0.625rem 0.9375rem; } }
 @media (min-width: 800px) and (max-width: 990px) {
   .header {
     top: 0px; }
@@ -473,7 +525,10 @@
   .news .overlay .date {
     text-align: left;
     width: 90%;
-    margin-top: 20px; } }
+    margin-top: 20px; }
+
+  .faq-questions select {
+    font-size: 1.875rem; } }
 /* Medium screens */
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   /* Container size classes */
@@ -533,7 +588,10 @@
     padding: 6.5625rem 6.5625rem; }
 
   .testimonial .slides .client-text p strong {
-    font-size: 2.25rem; } }
+    font-size: 2.25rem; }
+
+  .faq-questions select {
+    font-size: 2.75rem; } }
 /* ----------- iPad Pro ----------- */
 /* Ipad Pro Portrait */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -783,7 +841,10 @@
     height: 100%; }
     .form-container .container .overlay {
       position: relative;
-      height: 100%; } }
+      height: 100%; }
+
+  .testimonial .slides .client-text {
+    width: 50%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
   .column {
     margin: 5rem 1.25rem;
@@ -876,7 +937,11 @@
     height: 100%; }
     .form-container .container .overlay {
       position: relative;
-      height: 100%; } }
+      height: 100%; }
+
+  /* Testimonial */
+  .testimonial .slides .client-text {
+    width: 55% !important; } }
 /* Large screen devices */
 @media (min-width: 1100px) and (max-width: 1440px) {
   .header .row, .header .navbar {

@@ -30,6 +30,30 @@
 
 
 @media (min-width:320px) and (max-width:375px){
+
+ /* Toggle Menu */
+ .mobile-navigation .mobile-toggle-menu{
+    padding: 0.75rem 0.8rem;
+    align-items: center;
+ }
+ .hamburger .line{
+     width:20px;
+     margin:6px auto;
+ }
+
+ .hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    -ms-transform: translateY(10px) rotate(45deg);
+    -o-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-6px) rotate(-44deg);
+    -ms-transform: translateY(-6px) rotate(-44deg);
+    -o-transform: translateY(-6px) rotate(-44deg);
+    transform: translateY(-6px) rotate(-44deg);
+}
     .booknow-form-mobile{
        
         .choose-activity{            
@@ -72,29 +96,71 @@
         }
     } 
 
-        /* News */
-        .news{
+    /* News */
+    .news{
 
-            .overlay{
+        .overlay{
+            
+            .banner-title{
+                text-align:left;
+                margin-top:40px;
+                width:100%;
+                font-size:pixel2Rem(22);
+                line-height:pixel2Rem(22);
+                letter-spacing: 0px;
+            }
+    
+            .date{
+                text-align: left;
+                width:90%;
+                margin-top:20px;
+                font-size:pixel2Rem(14);
                 
-                .banner-title{
-                    text-align:left;
-                    margin-top:40px;
-                    width:100%;
-                    font-size:pixel2Rem(22);
-                    line-height:pixel2Rem(22);
-                    letter-spacing: 0px;
-                }
-        
-                .date{
-                    text-align: left;
-                    width:90%;
-                    margin-top:20px;
-                    font-size:pixel2Rem(14);
-                    
-                }
             }
         }
+    }
+
+
+ /* Testimonials */
+ .testimonial .slides .client-text p{
+    font-size:pixel2Rem(14) !important;
+ }
+ .testimonial .slides .client-text p strong{
+    font-size:pixel2Rem(18) !important;
+ }
+
+ .testimonial .slides .client-text{
+     @include padding(15, 0);
+ }
+
+ #testimonials .slider-controls{
+    top: calc(100vh - 57vh) !important;
+ }
+
+ #testimonials .arrow{
+     padding:5px;
+ }
+
+
+ /*mega menu accordion */
+ .main-navgitaion-mobile .beefup__head.text-36, .main-navgitaion-mobile .beefup__head > a.text-36{
+     font-size : pixel2Rem(20);
+ }
+ .main-navgitaion-mobile .submenu-items li a{
+    font-size : pixel2Rem(14); 
+ }
+
+
+ /* font size */
+ .text-30{
+    font-size : pixel2Rem(18); 
+ }
+
+ /* buttons */
+ .btn-primary{
+     @include padding(15, 10);
+ }
+
 }
 
 
@@ -446,6 +512,11 @@
             }
         }
     }
+
+
+    .faq-questions select{
+        font-size:pixel2Rem(30);
+    }
 }
 
 
@@ -497,6 +568,8 @@
         }
     }
 
+
+
 }
 
 
@@ -539,6 +612,10 @@
    
     .testimonial .slides .client-text p strong{
         font-size:pixel2Rem(36);
+    }
+
+    .faq-questions select{
+        font-size:pixel2Rem(44);
     }
 
 
@@ -743,6 +820,10 @@
     }  
     
   }
+  .testimonial .slides .client-text{
+      width:50%;
+  }
+
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -800,6 +881,11 @@
     }  
     
   }
+  
+  /* Testimonial */
+    .testimonial .slides .client-text{
+        width:55% !important;
+    }
 }
 
 /* Large screen devices */
